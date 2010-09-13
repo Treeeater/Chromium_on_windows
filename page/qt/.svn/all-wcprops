@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/qt
+END
+FrameQt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/qt/FrameQt.cpp
+END
+EventHandlerQt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/61078/trunk/WebCore/page/qt/EventHandlerQt.cpp
+END
+DragControllerQt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/52815/trunk/WebCore/page/qt/DragControllerQt.cpp
+END

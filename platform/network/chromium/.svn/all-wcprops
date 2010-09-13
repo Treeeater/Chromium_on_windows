@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/61865/trunk/WebCore/platform/network/chromium
+END
+NetworkStateNotifierChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/webkit/!svn/ver/39760/trunk/WebCore/platform/network/chromium/NetworkStateNotifierChromium.cpp
+END
+ResourceRequest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/54946/trunk/WebCore/platform/network/chromium/ResourceRequest.cpp
+END
+SocketStreamError.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/48859/trunk/WebCore/platform/network/chromium/SocketStreamError.h
+END
+ResourceRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/52677/trunk/WebCore/platform/network/chromium/ResourceRequest.h
+END
+SocketStreamHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/48859/trunk/WebCore/platform/network/chromium/SocketStreamHandle.h
+END
+AuthenticationChallengeChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/webkit/!svn/ver/39760/trunk/WebCore/platform/network/chromium/AuthenticationChallengeChromium.cpp
+END
+ResourceError.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/39760/trunk/WebCore/platform/network/chromium/ResourceError.h
+END
+AuthenticationChallenge.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/50772/trunk/WebCore/platform/network/chromium/AuthenticationChallenge.h
+END
+DNSChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/56128/trunk/WebCore/platform/network/chromium/DNSChromium.cpp
+END
+CookieJarChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/54742/trunk/WebCore/platform/network/chromium/CookieJarChromium.cpp
+END
+NetworkStateNotifierPrivate.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/webkit/!svn/ver/39760/trunk/WebCore/platform/network/chromium/NetworkStateNotifierPrivate.h
+END
+ResourceResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/61865/trunk/WebCore/platform/network/chromium/ResourceResponse.h
+END

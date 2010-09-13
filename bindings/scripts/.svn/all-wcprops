@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/webkit/!svn/ver/66090/trunk/WebCore/bindings/scripts
+END
+generate-bindings.pl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/63803/trunk/WebCore/bindings/scripts/generate-bindings.pl
+END
+CodeGeneratorCPP.pm
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65180/trunk/WebCore/bindings/scripts/CodeGeneratorCPP.pm
+END
+IDLParser.pm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/63198/trunk/WebCore/bindings/scripts/IDLParser.pm
+END
+InFilesParser.pm
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/63131/trunk/WebCore/bindings/scripts/InFilesParser.pm
+END
+IDLStructure.pm
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/63908/trunk/WebCore/bindings/scripts/IDLStructure.pm
+END
+gobject-generate-headers.pl
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/57985/trunk/WebCore/bindings/scripts/gobject-generate-headers.pl
+END
+CodeGeneratorJS.pm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65689/trunk/WebCore/bindings/scripts/CodeGeneratorJS.pm
+END
+CodeGeneratorObjC.pm
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/65021/trunk/WebCore/bindings/scripts/CodeGeneratorObjC.pm
+END
+CodeGeneratorV8.pm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65689/trunk/WebCore/bindings/scripts/CodeGeneratorV8.pm
+END
+CodeGeneratorGObject.pm
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/66090/trunk/WebCore/bindings/scripts/CodeGeneratorGObject.pm
+END
+CodeGenerator.pm
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/64414/trunk/WebCore/bindings/scripts/CodeGenerator.pm
+END

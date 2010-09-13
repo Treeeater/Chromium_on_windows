@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/webkit/!svn/ver/65021/trunk/WebCore/loader/archive
+END
+ArchiveFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65021/trunk/WebCore/loader/archive/ArchiveFactory.h
+END
+ArchiveResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/31916/trunk/WebCore/loader/archive/ArchiveResource.h
+END
+ArchiveResourceCollection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/31281/trunk/WebCore/loader/archive/ArchiveResourceCollection.cpp
+END
+Archive.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/31281/trunk/WebCore/loader/archive/Archive.h
+END
+ArchiveFactory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/50440/trunk/WebCore/loader/archive/ArchiveFactory.cpp
+END
+ArchiveResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/35673/trunk/WebCore/loader/archive/ArchiveResource.cpp
+END
+ArchiveResourceCollection.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/45891/trunk/WebCore/loader/archive/ArchiveResourceCollection.h
+END

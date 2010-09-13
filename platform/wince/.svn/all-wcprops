@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/wince
+END
+CursorWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/63339/trunk/WebCore/platform/wince/CursorWince.cpp
+END
+KURLWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/47137/trunk/WebCore/platform/wince/KURLWince.cpp
+END
+SearchPopupMenuWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/wince/SearchPopupMenuWince.cpp
+END
+DragImageWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/47137/trunk/WebCore/platform/wince/DragImageWince.cpp
+END
+FileChooserWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/47136/trunk/WebCore/platform/wince/FileChooserWince.cpp
+END
+KeygenWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/wince/KeygenWince.cpp
+END
+MIMETypeRegistryWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/56661/trunk/WebCore/platform/wince/MIMETypeRegistryWince.cpp
+END
+FileSystemWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/57283/trunk/WebCore/platform/wince/FileSystemWince.cpp
+END
+PasteboardWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/57272/trunk/WebCore/platform/wince/PasteboardWince.cpp
+END
+EditorWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/wince/EditorWince.cpp
+END
+DragDataWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/wince/DragDataWince.cpp
+END
+SharedTimerWince.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/58506/trunk/WebCore/platform/wince/SharedTimerWince.cpp
+END

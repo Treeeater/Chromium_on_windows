@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/64383/trunk/WebCore/manual-tests/compositing/resources
+END
+flash-frame.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/58320/trunk/WebCore/manual-tests/compositing/resources/flash-frame.html
+END
+composited-subframe.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repository/webkit/!svn/ver/64383/trunk/WebCore/manual-tests/compositing/resources/composited-subframe.html
+END
+tab-repaint-part-2.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/webkit/!svn/ver/58320/trunk/WebCore/manual-tests/compositing/resources/tab-repaint-part-2.html
+END

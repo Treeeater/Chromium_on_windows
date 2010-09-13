@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/webkit/!svn/ver/65446/trunk/WebCore/Configurations
+END
+Version.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/64883/trunk/WebCore/Configurations/Version.xcconfig
+END
+WebCore.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65446/trunk/WebCore/Configurations/WebCore.xcconfig
+END
+DebugRelease.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/64390/trunk/WebCore/Configurations/DebugRelease.xcconfig
+END
+FeatureDefines.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/64763/trunk/WebCore/Configurations/FeatureDefines.xcconfig
+END
+Base.xcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/64390/trunk/WebCore/Configurations/Base.xcconfig
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/62736/trunk/WebCore/platform/network/android
+END
+ResourceRequestAndroid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/52005/trunk/WebCore/platform/network/android/ResourceRequestAndroid.cpp
+END
+ResourceHandleAndroid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/webkit/!svn/ver/62736/trunk/WebCore/platform/network/android/ResourceHandleAndroid.cpp
+END
+ResourceLoaderAndroid.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/52123/trunk/WebCore/platform/network/android/ResourceLoaderAndroid.h
+END
+ResourceRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/62668/trunk/WebCore/platform/network/android/ResourceRequest.h
+END
+ResourceError.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/52105/trunk/WebCore/platform/network/android/ResourceError.h
+END
+AuthenticationChallenge.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/webkit/!svn/ver/52406/trunk/WebCore/platform/network/android/AuthenticationChallenge.h
+END
+CookieJarAndroid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/54707/trunk/WebCore/platform/network/android/CookieJarAndroid.cpp
+END
+ResourceResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/52105/trunk/WebCore/platform/network/android/ResourceResponse.h
+END
+NetworkStateNotifierAndroid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/webkit/!svn/ver/52635/trunk/WebCore/platform/network/android/NetworkStateNotifierAndroid.cpp
+END

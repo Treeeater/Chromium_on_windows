@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/58260/trunk/WebCore/manual-tests/chromium
+END
+no-autofill-on-readonly.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/webkit/!svn/ver/55219/trunk/WebCore/manual-tests/chromium/no-autofill-on-readonly.html
+END
+select-close-popup-value-change.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repository/webkit/!svn/ver/52001/trunk/WebCore/manual-tests/chromium/select-close-popup-value-change.html
+END
+suggestions-popup-font-change.html
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repository/webkit/!svn/ver/58260/trunk/WebCore/manual-tests/chromium/suggestions-popup-font-change.html
+END
+onchange-reload-popup.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/44500/trunk/WebCore/manual-tests/chromium/onchange-reload-popup.html
+END

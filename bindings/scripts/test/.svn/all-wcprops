@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/65333/trunk/WebCore/bindings/scripts/test
+END
+TestObj.idl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/64840/trunk/WebCore/bindings/scripts/test/TestObj.idl
+END
+TestCallback.idl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/58710/trunk/WebCore/bindings/scripts/test/TestCallback.idl
+END
+TestInterface.idl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/61131/trunk/WebCore/bindings/scripts/test/TestInterface.idl
+END

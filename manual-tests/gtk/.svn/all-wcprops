@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/webkit/!svn/ver/49193/trunk/WebCore/manual-tests/gtk
+END
+cursor-image.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/48888/trunk/WebCore/manual-tests/gtk/cursor-image.html
+END
+copy-htmltext.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/47310/trunk/WebCore/manual-tests/gtk/copy-htmltext.html
+END
+paste-richtext-from-firefox.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/webkit/!svn/ver/45592/trunk/WebCore/manual-tests/gtk/paste-richtext-from-firefox.html
+END
+floatingdiv.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/40551/trunk/WebCore/manual-tests/gtk/floatingdiv.html
+END
+caret-browsing.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/49193/trunk/WebCore/manual-tests/gtk/caret-browsing.html
+END
+plugin-resize-scroll.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/41383/trunk/WebCore/manual-tests/gtk/plugin-resize-scroll.html
+END

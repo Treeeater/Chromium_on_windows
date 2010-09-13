@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repository/webkit/!svn/ver/65077/trunk/WebCore/page/animation
+END
+AnimationBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/65077/trunk/WebCore/page/animation/AnimationBase.h
+END
+ImplicitAnimation.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/52017/trunk/WebCore/page/animation/ImplicitAnimation.h
+END
+CompositeAnimation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/63576/trunk/WebCore/page/animation/CompositeAnimation.cpp
+END
+AnimationController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/63576/trunk/WebCore/page/animation/AnimationController.cpp
+END
+AnimationControllerPrivate.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/65077/trunk/WebCore/page/animation/AnimationControllerPrivate.h
+END
+KeyframeAnimation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/63576/trunk/WebCore/page/animation/KeyframeAnimation.cpp
+END
+CompositeAnimation.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65077/trunk/WebCore/page/animation/CompositeAnimation.h
+END
+AnimationController.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65021/trunk/WebCore/page/animation/AnimationController.h
+END
+KeyframeAnimation.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/52017/trunk/WebCore/page/animation/KeyframeAnimation.h
+END
+AnimationBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/63862/trunk/WebCore/page/animation/AnimationBase.cpp
+END
+ImplicitAnimation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/63576/trunk/WebCore/page/animation/ImplicitAnimation.cpp
+END

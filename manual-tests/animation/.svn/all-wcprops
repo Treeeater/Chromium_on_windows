@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/52017/trunk/WebCore/manual-tests/animation
+END
+animateColor-values-simple.svg
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-values-simple.svg
+END
+transitions-and-paused-animations.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repository/webkit/!svn/ver/52017/trunk/WebCore/manual-tests/animation/transitions-and-paused-animations.html
+END
+animateTransform-keyTimes.svg
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateTransform-keyTimes.svg
+END
+animateMotion-to.svg
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateMotion-to.svg
+END
+animateTransform-parser.svg
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/webkit/!svn/ver/19202/trunk/WebCore/manual-tests/animation/animateTransform-parser.svg
+END
+animateColor-by.svg
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-by.svg
+END
+animateColor-from-by.svg
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-from-by.svg
+END
+animateColor-repeat-indefinite.svg
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-repeat-indefinite.svg
+END
+animateTransform-repeat-once.svg
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateTransform-repeat-once.svg
+END
+animateTransform-toanimation.svg
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repository/webkit/!svn/ver/19202/trunk/WebCore/manual-tests/animation/animateTransform-toanimation.svg
+END
+set-to.svg
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/19187/trunk/WebCore/manual-tests/animation/set-to.svg
+END
+animateColor-to.svg
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-to.svg
+END
+animateColor-to-from.svg
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/19168/trunk/WebCore/manual-tests/animation/animateColor-to-from.svg
+END

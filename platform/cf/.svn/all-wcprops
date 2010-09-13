@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/cf
+END
+BinaryPropertyList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/cf/BinaryPropertyList.cpp
+END
+RunLoopTimerCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/45635/trunk/WebCore/platform/cf/RunLoopTimerCF.cpp
+END
+SchedulePair.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/30778/trunk/WebCore/platform/cf/SchedulePair.cpp
+END
+SharedBufferCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/56289/trunk/WebCore/platform/cf/SharedBufferCF.cpp
+END
+BinaryPropertyList.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/cf/BinaryPropertyList.h
+END
+FileSystemCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/cf/FileSystemCF.cpp
+END
+KURLCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/30333/trunk/WebCore/platform/cf/KURLCFNet.cpp
+END
+SchedulePair.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/32609/trunk/WebCore/platform/cf/SchedulePair.h
+END

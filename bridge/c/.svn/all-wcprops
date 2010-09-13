@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repository/webkit/!svn/ver/65344/trunk/WebCore/bridge/c
+END
+CRuntimeObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/59941/trunk/WebCore/bridge/c/CRuntimeObject.h
+END
+c_runtime.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/54516/trunk/WebCore/bridge/c/c_runtime.cpp
+END
+c_utility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/65305/trunk/WebCore/bridge/c/c_utility.cpp
+END
+c_instance.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/60762/trunk/WebCore/bridge/c/c_instance.cpp
+END
+c_class.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/webkit/!svn/ver/65344/trunk/WebCore/bridge/c/c_class.cpp
+END
+c_runtime.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/webkit/!svn/ver/53464/trunk/WebCore/bridge/c/c_runtime.h
+END
+c_utility.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/webkit/!svn/ver/65021/trunk/WebCore/bridge/c/c_utility.h
+END
+c_instance.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/60392/trunk/WebCore/bridge/c/c_instance.h
+END
+c_class.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/webkit/!svn/ver/53464/trunk/WebCore/bridge/c/c_class.h
+END
+CRuntimeObject.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/59941/trunk/WebCore/bridge/c/CRuntimeObject.cpp
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repository/webkit/!svn/ver/66007/trunk/WebCore/platform/mock
+END
+GeolocationServiceMock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/56781/trunk/WebCore/platform/mock/GeolocationServiceMock.cpp
+END
+SpeechInputClientMock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/66007/trunk/WebCore/platform/mock/SpeechInputClientMock.cpp
+END
+GeolocationServiceMock.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/48144/trunk/WebCore/platform/mock/GeolocationServiceMock.h
+END
+DeviceOrientationClientMock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/64356/trunk/WebCore/platform/mock/DeviceOrientationClientMock.cpp
+END
+SpeechInputClientMock.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/66007/trunk/WebCore/platform/mock/SpeechInputClientMock.h
+END
+DeviceOrientationClientMock.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/64356/trunk/WebCore/platform/mock/DeviceOrientationClientMock.h
+END

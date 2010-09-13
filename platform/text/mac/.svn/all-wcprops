@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/mac
+END
+StringMac.mm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/mac/StringMac.mm
+END
+HyphenationMac.mm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/mac/HyphenationMac.mm
+END
+StringImplMac.mm
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/mac/StringImplMac.mm
+END
+ShapeArabic.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/41939/trunk/WebCore/platform/text/mac/ShapeArabic.c
+END
+make-charset-table.pl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/28251/trunk/WebCore/platform/text/mac/make-charset-table.pl
+END
+TextCodecMac.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/text/mac/TextCodecMac.cpp
+END
+mac-encodings.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/36807/trunk/WebCore/platform/text/mac/mac-encodings.txt
+END
+character-sets.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/28251/trunk/WebCore/platform/text/mac/character-sets.txt
+END
+ShapeArabic.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/36131/trunk/WebCore/platform/text/mac/ShapeArabic.h
+END
+TextBoundaries.mm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/42646/trunk/WebCore/platform/text/mac/TextBoundaries.mm
+END
+CharsetData.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/28234/trunk/WebCore/platform/text/mac/CharsetData.h
+END
+TextCodecMac.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/39465/trunk/WebCore/platform/text/mac/TextCodecMac.h
+END
+TextBreakIteratorInternalICUMac.mm
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/webkit/!svn/ver/45762/trunk/WebCore/platform/text/mac/TextBreakIteratorInternalICUMac.mm
+END

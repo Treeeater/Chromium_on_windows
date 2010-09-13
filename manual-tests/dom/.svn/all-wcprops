@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/webkit/!svn/ver/59227/trunk/WebCore/manual-tests/dom
+END
+form-control-for-label.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/59227/trunk/WebCore/manual-tests/dom/form-control-for-label.html
+END
+document-write-synchronous-after-page-load.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repository/webkit/!svn/ver/58950/trunk/WebCore/manual-tests/dom/document-write-synchronous-after-page-load.html
+END
+progressbar.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/56850/trunk/WebCore/manual-tests/dom/progressbar.html
+END

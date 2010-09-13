@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/57112/trunk/WebCore/manual-tests/spatial-navigation
+END
+links.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/55973/trunk/WebCore/manual-tests/spatial-navigation/links.html
+END
+spatial-navigation-test-cases.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repository/webkit/!svn/ver/57112/trunk/WebCore/manual-tests/spatial-navigation/spatial-navigation-test-cases.html
+END
+frameset.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/57112/trunk/WebCore/manual-tests/spatial-navigation/frameset.html
+END

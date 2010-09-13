@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repository/webkit/!svn/ver/61068/trunk/WebCore/platform/animation
+END
+Animation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/55576/trunk/WebCore/platform/animation/Animation.cpp
+END
+AnimationList.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/61068/trunk/WebCore/platform/animation/AnimationList.h
+END
+TimingFunction.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/55856/trunk/WebCore/platform/animation/TimingFunction.h
+END
+Animation.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/61068/trunk/WebCore/platform/animation/Animation.h
+END
+AnimationList.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/61068/trunk/WebCore/platform/animation/AnimationList.cpp
+END

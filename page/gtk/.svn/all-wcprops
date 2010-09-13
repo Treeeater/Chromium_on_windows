@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/gtk
+END
+FrameGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/gtk/FrameGtk.cpp
+END
+EventHandlerGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/64152/trunk/WebCore/page/gtk/EventHandlerGtk.cpp
+END
+DragControllerGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/45747/trunk/WebCore/page/gtk/DragControllerGtk.cpp
+END

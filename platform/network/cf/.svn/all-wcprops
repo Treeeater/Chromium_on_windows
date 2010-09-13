@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/network/cf
+END
+FormDataStreamCFNet.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/61663/trunk/WebCore/platform/network/cf/FormDataStreamCFNet.h
+END
+LoaderRunLoopCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/51222/trunk/WebCore/platform/network/cf/LoaderRunLoopCF.cpp
+END
+SocketStreamHandleCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/57232/trunk/WebCore/platform/network/cf/SocketStreamHandleCFNet.cpp
+END
+LoaderRunLoopCF.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/51222/trunk/WebCore/platform/network/cf/LoaderRunLoopCF.h
+END
+DNSCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/network/cf/DNSCFNet.cpp
+END
+ResourceRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/50625/trunk/WebCore/platform/network/cf/ResourceRequest.h
+END
+ResourceError.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/35900/trunk/WebCore/platform/network/cf/ResourceError.h
+END
+ResourceErrorCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/63709/trunk/WebCore/platform/network/cf/ResourceErrorCF.cpp
+END
+ResourceResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/41092/trunk/WebCore/platform/network/cf/ResourceResponse.h
+END
+CredentialStorageCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/51565/trunk/WebCore/platform/network/cf/CredentialStorageCFNet.cpp
+END
+ResourceRequestCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/63265/trunk/WebCore/platform/network/cf/ResourceRequestCFNet.cpp
+END
+ResourceHandleCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/63836/trunk/WebCore/platform/network/cf/ResourceHandleCFNet.cpp
+END
+SocketStreamError.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/cf/SocketStreamError.h
+END
+ResourceRequestCFNet.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/50625/trunk/WebCore/platform/network/cf/ResourceRequestCFNet.h
+END
+SocketStreamHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/51377/trunk/WebCore/platform/network/cf/SocketStreamHandle.h
+END
+ResourceResponseCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/57373/trunk/WebCore/platform/network/cf/ResourceResponseCFNet.cpp
+END
+AuthenticationChallenge.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/50882/trunk/WebCore/platform/network/cf/AuthenticationChallenge.h
+END
+AuthenticationCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/57232/trunk/WebCore/platform/network/cf/AuthenticationCF.cpp
+END
+FormDataStreamCFNet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/network/cf/FormDataStreamCFNet.cpp
+END
+AuthenticationCF.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/61806/trunk/WebCore/platform/network/cf/AuthenticationCF.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/text/gtk
+END
+TextBreakIteratorInternalICUGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/webkit/!svn/ver/45762/trunk/WebCore/platform/text/gtk/TextBreakIteratorInternalICUGtk.cpp
+END
+TextCodecGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/text/gtk/TextCodecGtk.cpp
+END
+TextBreakIteratorGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/55158/trunk/WebCore/platform/text/gtk/TextBreakIteratorGtk.cpp
+END
+TextCodecGtk.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/50508/trunk/WebCore/platform/text/gtk/TextCodecGtk.h
+END

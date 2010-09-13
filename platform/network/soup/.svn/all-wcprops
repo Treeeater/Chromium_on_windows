@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/63340/trunk/WebCore/platform/network/soup
+END
+CookieJarSoup.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/41139/trunk/WebCore/platform/network/soup/CookieJarSoup.h
+END
+SocketStreamError.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/soup/SocketStreamError.h
+END
+ResourceRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/55086/trunk/WebCore/platform/network/soup/ResourceRequest.h
+END
+SocketStreamHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/soup/SocketStreamHandle.h
+END
+ResourceError.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/35900/trunk/WebCore/platform/network/soup/ResourceError.h
+END
+ResourceRequestSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/network/soup/ResourceRequestSoup.cpp
+END
+GOwnPtrSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/55716/trunk/WebCore/platform/network/soup/GOwnPtrSoup.cpp
+END
+AuthenticationChallenge.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/30970/trunk/WebCore/platform/network/soup/AuthenticationChallenge.h
+END
+SocketStreamHandleSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/soup/SocketStreamHandleSoup.cpp
+END
+ResourceHandleSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/63340/trunk/WebCore/platform/network/soup/ResourceHandleSoup.cpp
+END
+ResourceResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/55086/trunk/WebCore/platform/network/soup/ResourceResponse.h
+END
+GOwnPtrSoup.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/55716/trunk/WebCore/platform/network/soup/GOwnPtrSoup.h
+END
+CookieJarSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/network/soup/CookieJarSoup.cpp
+END
+ResourceResponseSoup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/network/soup/ResourceResponseSoup.cpp
+END

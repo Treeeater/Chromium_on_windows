@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/63599/trunk/WebCore/platform/graphics/openvg
+END
+ImageOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/ImageOpenVG.cpp
+END
+SharedResourceOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repository/webkit/!svn/ver/55371/trunk/WebCore/platform/graphics/openvg/SharedResourceOpenVG.h
+END
+VGUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/VGUtils.h
+END
+SurfaceOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/55922/trunk/WebCore/platform/graphics/openvg/SurfaceOpenVG.cpp
+END
+PathOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/63599/trunk/WebCore/platform/graphics/openvg/PathOpenVG.cpp
+END
+SurfaceOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/55922/trunk/WebCore/platform/graphics/openvg/SurfaceOpenVG.h
+END
+EGLDisplayOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/55919/trunk/WebCore/platform/graphics/openvg/EGLDisplayOpenVG.cpp
+END
+PainterOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/59673/trunk/WebCore/platform/graphics/openvg/PainterOpenVG.cpp
+END
+EGLDisplayOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/55919/trunk/WebCore/platform/graphics/openvg/EGLDisplayOpenVG.h
+END
+TiledImageOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/TiledImageOpenVG.cpp
+END
+GraphicsContextOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repository/webkit/!svn/ver/61129/trunk/WebCore/platform/graphics/openvg/GraphicsContextOpenVG.cpp
+END
+PlatformPathOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repository/webkit/!svn/ver/55371/trunk/WebCore/platform/graphics/openvg/PlatformPathOpenVG.h
+END
+PainterOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/PainterOpenVG.h
+END
+TiledImageOpenVG.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/TiledImageOpenVG.h
+END
+SharedResourceOpenVG.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/webkit/!svn/ver/55371/trunk/WebCore/platform/graphics/openvg/SharedResourceOpenVG.cpp
+END
+VGUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/59619/trunk/WebCore/platform/graphics/openvg/VGUtils.cpp
+END
+EGLUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/53639/trunk/WebCore/platform/graphics/openvg/EGLUtils.h
+END

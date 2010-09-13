@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/webkit/!svn/ver/60375/trunk/WebCore/manual-tests/qt
+END
+plugin-sibling-frame-include.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repository/webkit/!svn/ver/49973/trunk/WebCore/manual-tests/qt/plugin-sibling-frame-include.html
+END
+qtplugin-scrolling.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/53259/trunk/WebCore/manual-tests/qt/qtplugin-scrolling.html
+END
+plugin-iframe.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/44381/trunk/WebCore/manual-tests/qt/plugin-iframe.html
+END
+qtplugin.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/51409/trunk/WebCore/manual-tests/qt/qtplugin.html
+END
+main.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/32620/trunk/WebCore/manual-tests/qt/main.html
+END
+unload-alert.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/44934/trunk/WebCore/manual-tests/qt/unload-alert.html
+END
+plugin-sibling-frame.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/43916/trunk/WebCore/manual-tests/qt/plugin-sibling-frame.html
+END

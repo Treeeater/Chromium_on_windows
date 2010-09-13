@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repository/webkit/!svn/ver/65999/trunk/WebCore/platform/text
+END
+TextCodecUserDefined.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/TextCodecUserDefined.cpp
+END
+TextStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/58256/trunk/WebCore/platform/text/TextStream.cpp
+END
+SegmentedString.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/65167/trunk/WebCore/platform/text/SegmentedString.cpp
+END
+AtomicStringKeyedMRUCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/AtomicStringKeyedMRUCache.h
+END
+TextBreakIteratorICU.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/56345/trunk/WebCore/platform/text/TextBreakIteratorICU.cpp
+END
+TextBoundaries.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/44102/trunk/WebCore/platform/text/TextBoundaries.h
+END
+TextEncodingDetectorNone.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/42030/trunk/WebCore/platform/text/TextEncodingDetectorNone.cpp
+END
+TextBreakIteratorInternalICU.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/45762/trunk/WebCore/platform/text/TextBreakIteratorInternalICU.h
+END
+String.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/57904/trunk/WebCore/platform/text/String.cpp
+END
+UnicodeRange.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/47144/trunk/WebCore/platform/text/UnicodeRange.h
+END
+TextCodecUTF16.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/31316/trunk/WebCore/platform/text/TextCodecUTF16.h
+END
+PlatformString.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/57904/trunk/WebCore/platform/text/PlatformString.h
+END
+BidiContext.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/61324/trunk/WebCore/platform/text/BidiContext.h
+END
+RegularExpression.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/48290/trunk/WebCore/platform/text/RegularExpression.cpp
+END
+LineEnding.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/LineEnding.h
+END
+TextCodec.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/33380/trunk/WebCore/platform/text/TextCodec.cpp
+END
+StringBuilder.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/64949/trunk/WebCore/platform/text/StringBuilder.h
+END
+TextEncodingRegistry.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/64817/trunk/WebCore/platform/text/TextEncodingRegistry.cpp
+END
+TextCodecICU.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/44050/trunk/WebCore/platform/text/TextCodecICU.h
+END
+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/54616/trunk/WebCore/platform/text/Base64.h
+END
+TextEncodingDetector.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/42023/trunk/WebCore/platform/text/TextEncodingDetector.h
+END
+TextDirection.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/28234/trunk/WebCore/platform/text/TextDirection.h
+END
+Hyphenation.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/Hyphenation.h
+END
+ParserUtilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/33034/trunk/WebCore/platform/text/ParserUtilities.h
+END
+BidiResolver.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/61921/trunk/WebCore/platform/text/BidiResolver.h
+END
+TextEncoding.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/TextEncoding.h
+END
+TextCodecLatin1.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/31316/trunk/WebCore/platform/text/TextCodecLatin1.h
+END
+TextBoundaries.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65084/trunk/WebCore/platform/text/TextBoundaries.cpp
+END
+UnicodeRange.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/29663/trunk/WebCore/platform/text/UnicodeRange.cpp
+END
+TextCodecUserDefined.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/31316/trunk/WebCore/platform/text/TextCodecUserDefined.h
+END
+StringBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/StringBuffer.h
+END
+TextStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/TextStream.h
+END
+SegmentedString.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65100/trunk/WebCore/platform/text/SegmentedString.h
+END
+TextBreakIterator.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/50977/trunk/WebCore/platform/text/TextBreakIterator.h
+END
+TextCodecUTF16.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/TextCodecUTF16.cpp
+END
+BidiContext.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/61324/trunk/WebCore/platform/text/BidiContext.cpp
+END
+LineEnding.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/63343/trunk/WebCore/platform/text/LineEnding.cpp
+END
+StringBuilder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/StringBuilder.cpp
+END
+TextCodecICU.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/64831/trunk/WebCore/platform/text/TextCodecICU.cpp
+END
+Base64.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/55633/trunk/WebCore/platform/text/Base64.cpp
+END
+CharacterNames.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/61548/trunk/WebCore/platform/text/CharacterNames.h
+END
+RegularExpression.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/51179/trunk/WebCore/platform/text/RegularExpression.h
+END
+TextEncodingDetectorICU.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/53809/trunk/WebCore/platform/text/TextEncodingDetectorICU.cpp
+END
+Hyphenation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/64677/trunk/WebCore/platform/text/Hyphenation.cpp
+END
+TextCodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/TextCodec.h
+END
+TextEncodingRegistry.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/58157/trunk/WebCore/platform/text/TextEncodingRegistry.h
+END
+SuffixTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/56991/trunk/WebCore/platform/text/SuffixTree.h
+END
+TextCodecLatin1.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/65995/trunk/WebCore/platform/text/TextCodecLatin1.cpp
+END
+TextEncoding.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/64817/trunk/WebCore/platform/text/TextEncoding.cpp
+END

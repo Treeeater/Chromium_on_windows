@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repository/webkit/!svn/ver/65249/trunk/WebCore/plugins/symbian
+END
+npinterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/61663/trunk/WebCore/plugins/symbian/npinterface.h
+END
+PluginContainerSymbian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/56546/trunk/WebCore/plugins/symbian/PluginContainerSymbian.cpp
+END
+PluginDatabaseSymbian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/49574/trunk/WebCore/plugins/symbian/PluginDatabaseSymbian.cpp
+END
+PluginContainerSymbian.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/56546/trunk/WebCore/plugins/symbian/PluginContainerSymbian.h
+END
+PluginViewSymbian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/65249/trunk/WebCore/plugins/symbian/PluginViewSymbian.cpp
+END
+PluginPackageSymbian.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/58752/trunk/WebCore/plugins/symbian/PluginPackageSymbian.cpp
+END

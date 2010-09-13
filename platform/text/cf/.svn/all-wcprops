@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/cf
+END
+StringCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/cf/StringCF.cpp
+END
+HyphenationCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/cf/HyphenationCF.cpp
+END
+StringImplCF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/text/cf/StringImplCF.cpp
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/55855/trunk/WebCore/accessibility/chromium
+END
+AccessibilityObjectChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/webkit/!svn/ver/55855/trunk/WebCore/accessibility/chromium/AccessibilityObjectChromium.cpp
+END
+AccessibilityObjectWrapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/51402/trunk/WebCore/accessibility/chromium/AccessibilityObjectWrapper.h
+END
+AXObjectCacheChromium.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/54584/trunk/WebCore/accessibility/chromium/AXObjectCacheChromium.cpp
+END

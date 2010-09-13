@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/60024/trunk/WebCore/platform/graphics/brew
+END
+IntPointBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/54219/trunk/WebCore/platform/graphics/brew/IntPointBrew.cpp
+END
+IntSizeBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/54204/trunk/WebCore/platform/graphics/brew/IntSizeBrew.cpp
+END
+IconBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/60024/trunk/WebCore/platform/graphics/brew/IconBrew.cpp
+END

@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repository/webkit/!svn/ver/65857/trunk/WebCore/platform/win
+END
+GDIObjectCounter.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/23462/trunk/WebCore/platform/win/GDIObjectCounter.h
+END
+MIMETypeRegistryWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/56661/trunk/WebCore/platform/win/MIMETypeRegistryWin.cpp
+END
+SystemInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/53273/trunk/WebCore/platform/win/SystemInfo.cpp
+END
+SearchPopupMenuWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/64513/trunk/WebCore/platform/win/SearchPopupMenuWin.h
+END
+PasteboardWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/63985/trunk/WebCore/platform/win/PasteboardWin.cpp
+END
+FileSystemWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/win/FileSystemWin.cpp
+END
+SoundWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/29663/trunk/WebCore/platform/win/SoundWin.cpp
+END
+KeyEventWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/55909/trunk/WebCore/platform/win/KeyEventWin.cpp
+END
+BString.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/65190/trunk/WebCore/platform/win/BString.cpp
+END
+DragImageCGWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/44789/trunk/WebCore/platform/win/DragImageCGWin.cpp
+END
+ClipboardUtilitiesWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/64242/trunk/WebCore/platform/win/ClipboardUtilitiesWin.cpp
+END
+PopupMenuWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/64513/trunk/WebCore/platform/win/PopupMenuWin.h
+END
+DragImageCairoWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/44789/trunk/WebCore/platform/win/DragImageCairoWin.cpp
+END
+PlatformMouseEventWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/52791/trunk/WebCore/platform/win/PlatformMouseEventWin.cpp
+END
+SharedBufferWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65349/trunk/WebCore/platform/win/SharedBufferWin.cpp
+END
+TemporaryLinkStubs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/55975/trunk/WebCore/platform/win/TemporaryLinkStubs.cpp
+END
+SystemTimeWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/59868/trunk/WebCore/platform/win/SystemTimeWin.cpp
+END
+ClipboardWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/win/ClipboardWin.h
+END
+Language.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/win/Language.cpp
+END
+WheelEventWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/45304/trunk/WebCore/platform/win/WheelEventWin.cpp
+END
+SharedTimerWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/55542/trunk/WebCore/platform/win/SharedTimerWin.cpp
+END
+DragDataWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/win/DragDataWin.cpp
+END
+WindowMessageBroadcaster.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/34640/trunk/WebCore/platform/win/WindowMessageBroadcaster.cpp
+END
+WebCoreInstanceHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/55556/trunk/WebCore/platform/win/WebCoreInstanceHandle.cpp
+END
+WindowMessageListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/27765/trunk/WebCore/platform/win/WindowMessageListener.h
+END
+WebCoreTextRenderer.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/win/WebCoreTextRenderer.h
+END
+BitmapInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65857/trunk/WebCore/platform/win/BitmapInfo.cpp
+END
+ScrollbarThemeWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/42721/trunk/WebCore/platform/win/ScrollbarThemeWin.h
+END
+GDIObjectCounter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/win/GDIObjectCounter.cpp
+END
+SoftLinking.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/57705/trunk/WebCore/platform/win/SoftLinking.h
+END
+SearchPopupMenuWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/win/SearchPopupMenuWin.cpp
+END
+DragImageWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/46461/trunk/WebCore/platform/win/DragImageWin.cpp
+END
+WCDataObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/win/WCDataObject.h
+END
+ScrollbarThemeSafari.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/37462/trunk/WebCore/platform/win/ScrollbarThemeSafari.h
+END
+WidgetWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/63339/trunk/WebCore/platform/win/WidgetWin.cpp
+END
+PlatformScreenWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/52791/trunk/WebCore/platform/win/PlatformScreenWin.cpp
+END
+LoggingWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/55036/trunk/WebCore/platform/win/LoggingWin.cpp
+END
+EditorWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/win/EditorWin.cpp
+END
+SystemInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/42288/trunk/WebCore/platform/win/SystemInfo.h
+END
+PopupMenuWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65857/trunk/WebCore/platform/win/PopupMenuWin.cpp
+END
+ContextMenuItemWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/win/ContextMenuItemWin.cpp
+END
+COMPtr.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/65133/trunk/WebCore/platform/win/COMPtr.h
+END
+BString.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/win/BString.h
+END
+ClipboardWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/win/ClipboardWin.cpp
+END
+ClipboardUtilitiesWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/win/ClipboardUtilitiesWin.h
+END
+FileChooserWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/37880/trunk/WebCore/platform/win/FileChooserWin.cpp
+END
+WebCoreTextRenderer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/50764/trunk/WebCore/platform/win/WebCoreTextRenderer.cpp
+END
+ScrollbarThemeWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/42721/trunk/WebCore/platform/win/ScrollbarThemeWin.cpp
+END
+ContextMenuWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/win/ContextMenuWin.cpp
+END
+EventLoopWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/53273/trunk/WebCore/platform/win/EventLoopWin.cpp
+END
+WCDataObject.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/44723/trunk/WebCore/platform/win/WCDataObject.cpp
+END
+CursorWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/63339/trunk/WebCore/platform/win/CursorWin.cpp
+END
+WindowMessageBroadcaster.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/45891/trunk/WebCore/platform/win/WindowMessageBroadcaster.h
+END
+ScrollbarThemeSafari.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/49735/trunk/WebCore/platform/win/ScrollbarThemeSafari.cpp
+END
+WebCoreInstanceHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/59868/trunk/WebCore/platform/win/WebCoreInstanceHandle.h
+END
+BitmapInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/65857/trunk/WebCore/platform/win/BitmapInfo.h
+END

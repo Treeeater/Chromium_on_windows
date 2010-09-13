@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/63709/trunk/WebCore/platform/graphics/opentype
+END
+OpenTypeUtilities.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/63709/trunk/WebCore/platform/graphics/opentype/OpenTypeUtilities.cpp
+END
+OpenTypeSanitizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/51623/trunk/WebCore/platform/graphics/opentype/OpenTypeSanitizer.h
+END
+OpenTypeUtilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/52791/trunk/WebCore/platform/graphics/opentype/OpenTypeUtilities.h
+END
+OpenTypeSanitizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/58517/trunk/WebCore/platform/graphics/opentype/OpenTypeSanitizer.cpp
+END

@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repository/webkit/!svn/ver/66158/trunk/WebCore/platform/network
+END
+BlobRegistryImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65622/trunk/WebCore/platform/network/BlobRegistryImpl.h
+END
+CredentialStorage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/66005/trunk/WebCore/platform/network/CredentialStorage.cpp
+END
+ResourceErrorBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/62828/trunk/WebCore/platform/network/ResourceErrorBase.h
+END
+NetworkingContext.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65579/trunk/WebCore/platform/network/NetworkingContext.h
+END
+BlobStorageData.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65622/trunk/WebCore/platform/network/BlobStorageData.h
+END
+BlobResourceHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/BlobResourceHandle.cpp
+END
+FormDataBuilder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/63999/trunk/WebCore/platform/network/FormDataBuilder.cpp
+END
+ResourceHandleInternal.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/65835/trunk/WebCore/platform/network/ResourceHandleInternal.h
+END
+ResourceResponseBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/63425/trunk/WebCore/platform/network/ResourceResponseBase.h
+END
+ProtectionSpace.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/58442/trunk/WebCore/platform/network/ProtectionSpace.h
+END
+ResourceHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/ResourceHandle.h
+END
+BlobData.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65622/trunk/WebCore/platform/network/BlobData.cpp
+END
+SocketStreamErrorBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/SocketStreamErrorBase.cpp
+END
+SocketStreamHandleBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/51934/trunk/WebCore/platform/network/SocketStreamHandleBase.cpp
+END
+BlobRegistry.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65622/trunk/WebCore/platform/network/BlobRegistry.h
+END
+AuthenticationChallengeBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/30584/trunk/WebCore/platform/network/AuthenticationChallengeBase.cpp
+END
+HTTPParsers.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/HTTPParsers.cpp
+END
+Credential.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/64798/trunk/WebCore/platform/network/Credential.h
+END
+HTTPHeaderMap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/55066/trunk/WebCore/platform/network/HTTPHeaderMap.cpp
+END
+BlobRegistryImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/BlobRegistryImpl.cpp
+END
+ResourceErrorBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/62828/trunk/WebCore/platform/network/ResourceErrorBase.cpp
+END
+NetworkStateNotifier.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/58662/trunk/WebCore/platform/network/NetworkStateNotifier.h
+END
+ResourceRequestBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/63032/trunk/WebCore/platform/network/ResourceRequestBase.h
+END
+ResourceResponseBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/65468/trunk/WebCore/platform/network/ResourceResponseBase.cpp
+END
+ProtectionSpace.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/51189/trunk/WebCore/platform/network/ProtectionSpace.cpp
+END
+FormData.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65786/trunk/WebCore/platform/network/FormData.h
+END
+ResourceHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/ResourceHandle.cpp
+END
+CredentialStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/63834/trunk/WebCore/platform/network/CredentialStorage.h
+END
+ResourceLoadTiming.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/63166/trunk/WebCore/platform/network/ResourceLoadTiming.h
+END
+BlobResourceHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/66158/trunk/WebCore/platform/network/BlobResourceHandle.h
+END
+ResourceHandleClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/ResourceHandleClient.h
+END
+FormDataBuilder.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/network/FormDataBuilder.h
+END
+Credential.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/63578/trunk/WebCore/platform/network/Credential.cpp
+END
+ProtectionSpaceHash.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/54028/trunk/WebCore/platform/network/ProtectionSpaceHash.h
+END
+BlobData.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65622/trunk/WebCore/platform/network/BlobData.h
+END
+SocketStreamErrorBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/SocketStreamErrorBase.h
+END
+SocketStreamHandleBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/47788/trunk/WebCore/platform/network/SocketStreamHandleBase.h
+END
+AuthenticationChallengeBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/39601/trunk/WebCore/platform/network/AuthenticationChallengeBase.h
+END
+AuthenticationClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/50772/trunk/WebCore/platform/network/AuthenticationClient.h
+END
+SocketStreamHandleClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repository/webkit/!svn/ver/50951/trunk/WebCore/platform/network/SocketStreamHandleClient.h
+END
+HTTPParsers.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/65827/trunk/WebCore/platform/network/HTTPParsers.h
+END
+DNS.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/network/DNS.h
+END
+NetworkStateNotifier.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/39138/trunk/WebCore/platform/network/NetworkStateNotifier.cpp
+END
+ResourceRequestBase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/58647/trunk/WebCore/platform/network/ResourceRequestBase.cpp
+END
+HTTPHeaderMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/network/HTTPHeaderMap.h
+END
+FormData.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65786/trunk/WebCore/platform/network/FormData.cpp
+END

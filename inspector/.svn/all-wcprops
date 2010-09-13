@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repository/webkit/!svn/ver/66239/trunk/WebCore/inspector
+END
+InjectedScriptHost.idl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65072/trunk/WebCore/inspector/InjectedScriptHost.idl
+END
+InspectorDebuggerAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorDebuggerAgent.h
+END
+InspectorCSSStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorCSSStore.h
+END
+CodeGeneratorInspector.pm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/66101/trunk/WebCore/inspector/CodeGeneratorInspector.pm
+END
+JavaScriptCallFrame.idl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/63331/trunk/WebCore/inspector/JavaScriptCallFrame.idl
+END
+InspectorDOMStorageResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/InspectorDOMStorageResource.cpp
+END
+InspectorDatabaseResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorDatabaseResource.cpp
+END
+InspectorFrontendHost.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/InspectorFrontendHost.cpp
+END
+ConsoleMessage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/ConsoleMessage.cpp
+END
+InjectedScriptHost.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InjectedScriptHost.cpp
+END
+InspectorController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/InspectorController.cpp
+END
+InjectedScript.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/65072/trunk/WebCore/inspector/InjectedScript.cpp
+END
+InspectorFrontendClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/InspectorFrontendClient.h
+END
+InspectorStorageAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorStorageAgent.cpp
+END
+InspectorTimelineAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorTimelineAgent.cpp
+END
+InspectorResource.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/InspectorResource.cpp
+END
+InspectorFrontendClientLocal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/65870/trunk/WebCore/inspector/InspectorFrontendClientLocal.cpp
+END
+InspectorBackend.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/66117/trunk/WebCore/inspector/InspectorBackend.h
+END
+ScriptDebugListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65021/trunk/WebCore/inspector/ScriptDebugListener.h
+END
+InspectorProfilerAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/66117/trunk/WebCore/inspector/InspectorProfilerAgent.cpp
+END
+ScriptBreakpoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/61414/trunk/WebCore/inspector/ScriptBreakpoint.h
+END
+InspectorDebuggerAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/66013/trunk/WebCore/inspector/InspectorDebuggerAgent.cpp
+END
+InspectorDOMAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65942/trunk/WebCore/inspector/InspectorDOMAgent.h
+END
+InspectorValues.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/InspectorValues.h
+END
+ScriptGCEventListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/57151/trunk/WebCore/inspector/ScriptGCEventListener.h
+END
+InspectorCSSStore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorCSSStore.cpp
+END
+Inspector.idl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/Inspector.idl
+END
+TimelineRecordFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/62656/trunk/WebCore/inspector/TimelineRecordFactory.h
+END
+InspectorApplicationCacheAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorApplicationCacheAgent.h
+END
+InspectorDatabaseResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorDatabaseResource.h
+END
+InspectorDOMStorageResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorDOMStorageResource.h
+END
+InspectorFrontendHost.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/InspectorFrontendHost.h
+END
+InspectorClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65021/trunk/WebCore/inspector/InspectorClient.h
+END
+ScriptProfile.idl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/57505/trunk/WebCore/inspector/ScriptProfile.idl
+END
+ConsoleMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/ConsoleMessage.h
+END
+InjectedScriptHost.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InjectedScriptHost.h
+END
+InspectorWorkerResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/56404/trunk/WebCore/inspector/InspectorWorkerResource.h
+END
+InspectorBackend.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/66117/trunk/WebCore/inspector/InspectorBackend.cpp
+END
+InspectorController.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/66012/trunk/WebCore/inspector/InspectorController.h
+END
+InjectedScript.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/65730/trunk/WebCore/inspector/InjectedScript.h
+END
+InspectorStorageAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorStorageAgent.h
+END
+InspectorTimelineAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorTimelineAgent.h
+END
+ScriptProfileNode.idl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/57505/trunk/WebCore/inspector/ScriptProfileNode.idl
+END
+InspectorResource.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorResource.h
+END
+ScriptBreakpoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/ScriptBreakpoint.cpp
+END
+InspectorDOMAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/66222/trunk/WebCore/inspector/InspectorDOMAgent.cpp
+END
+InspectorFrontendClientLocal.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/64124/trunk/WebCore/inspector/InspectorFrontendClientLocal.h
+END
+InspectorValues.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/InspectorValues.cpp
+END
+InspectorFrontendHost.idl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/66198/trunk/WebCore/inspector/InspectorFrontendHost.idl
+END
+TimelineRecordFactory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/66098/trunk/WebCore/inspector/TimelineRecordFactory.cpp
+END
+InspectorApplicationCacheAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repository/webkit/!svn/ver/65891/trunk/WebCore/inspector/InspectorApplicationCacheAgent.cpp
+END
+InspectorProfilerAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/66117/trunk/WebCore/inspector/InspectorProfilerAgent.h
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/webkit/!svn/ver/65994/trunk/WebCore/platform/network/win
+END
+CookieStorageWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repository/webkit/!svn/ver/33579/trunk/WebCore/platform/network/win/CookieStorageWin.h
+END
+ResourceHandleWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/65994/trunk/WebCore/platform/network/win/ResourceHandleWin.cpp
+END
+CookieJarCFNetWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repository/webkit/!svn/ver/54707/trunk/WebCore/platform/network/win/CookieJarCFNetWin.cpp
+END
+CookieJarWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repository/webkit/!svn/ver/54707/trunk/WebCore/platform/network/win/CookieJarWin.cpp
+END
+ResourceHandleWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repository/webkit/!svn/ver/29663/trunk/WebCore/platform/network/win/ResourceHandleWin.h
+END
+NetworkStateNotifierWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/61554/trunk/WebCore/platform/network/win/NetworkStateNotifierWin.cpp
+END
+CookieStorageWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/33579/trunk/WebCore/platform/network/win/CookieStorageWin.cpp
+END

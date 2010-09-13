@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/win
+END
+DragControllerWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/45747/trunk/WebCore/page/win/DragControllerWin.cpp
+END
+FrameCGWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/win/FrameCGWin.cpp
+END
+FrameCairoWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/win/FrameCairoWin.cpp
+END
+FrameWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/54221/trunk/WebCore/page/win/FrameWin.cpp
+END
+EventHandlerWin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/64152/trunk/WebCore/page/win/EventHandlerWin.cpp
+END
+FrameWin.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/webkit/!svn/ver/61663/trunk/WebCore/page/win/FrameWin.h
+END

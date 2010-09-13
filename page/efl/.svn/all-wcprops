@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/efl
+END
+FrameEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/efl/FrameEfl.cpp
+END
+EventHandlerEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/55343/trunk/WebCore/page/efl/EventHandlerEfl.cpp
+END
+DragControllerEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/55343/trunk/WebCore/page/efl/DragControllerEfl.cpp
+END

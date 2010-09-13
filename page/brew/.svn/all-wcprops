@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/brew
+END
+EventHandlerBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/55330/trunk/WebCore/page/brew/EventHandlerBrew.cpp
+END
+DragControllerBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/60012/trunk/WebCore/page/brew/DragControllerBrew.cpp
+END
+ChromeClientBrew.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/61722/trunk/WebCore/page/brew/ChromeClientBrew.h
+END
+FrameBrew.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/65904/trunk/WebCore/page/brew/FrameBrew.cpp
+END

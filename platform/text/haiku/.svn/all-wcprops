@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/haiku
+END
+TextBreakIteratorInternalICUHaiku.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repository/webkit/!svn/ver/47144/trunk/WebCore/platform/text/haiku/TextBreakIteratorInternalICUHaiku.cpp
+END
+StringHaiku.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/text/haiku/StringHaiku.cpp
+END

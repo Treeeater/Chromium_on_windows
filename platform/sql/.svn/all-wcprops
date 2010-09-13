@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repository/webkit/!svn/ver/65667/trunk/WebCore/platform/sql
+END
+SQLiteAuthorizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/36054/trunk/WebCore/platform/sql/SQLiteAuthorizer.cpp
+END
+SQLValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/49160/trunk/WebCore/platform/sql/SQLValue.h
+END
+SQLiteDatabase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65427/trunk/WebCore/platform/sql/SQLiteDatabase.cpp
+END
+SQLiteFileSystem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/57245/trunk/WebCore/platform/sql/SQLiteFileSystem.cpp
+END
+SQLiteStatement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/65667/trunk/WebCore/platform/sql/SQLiteStatement.cpp
+END
+SQLiteTransaction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/54393/trunk/WebCore/platform/sql/SQLiteTransaction.cpp
+END
+SQLiteDatabase.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/64384/trunk/WebCore/platform/sql/SQLiteDatabase.h
+END
+SQLiteFileSystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/57245/trunk/WebCore/platform/sql/SQLiteFileSystem.h
+END
+SQLiteStatement.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/65667/trunk/WebCore/platform/sql/SQLiteStatement.h
+END
+SQLValue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/49160/trunk/WebCore/platform/sql/SQLValue.cpp
+END
+SQLiteTransaction.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/54393/trunk/WebCore/platform/sql/SQLiteTransaction.h
+END

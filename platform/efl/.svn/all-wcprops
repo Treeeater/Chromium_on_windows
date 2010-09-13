@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repository/webkit/!svn/ver/66042/trunk/WebCore/platform/efl
+END
+PlatformKeyboardEventEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/efl/PlatformKeyboardEventEfl.cpp
+END
+ContextMenuEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/60454/trunk/WebCore/platform/efl/ContextMenuEfl.cpp
+END
+EventLoopEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/55345/trunk/WebCore/platform/efl/EventLoopEfl.cpp
+END
+CursorEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/63339/trunk/WebCore/platform/efl/CursorEfl.cpp
+END
+LocalizedStringsEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/65117/trunk/WebCore/platform/efl/LocalizedStringsEfl.cpp
+END
+MIMETypeRegistryEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repository/webkit/!svn/ver/57970/trunk/WebCore/platform/efl/MIMETypeRegistryEfl.cpp
+END
+ScrollbarEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/61331/trunk/WebCore/platform/efl/ScrollbarEfl.cpp
+END
+SearchPopupMenuEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repository/webkit/!svn/ver/64513/trunk/WebCore/platform/efl/SearchPopupMenuEfl.h
+END
+FileSystemEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/64005/trunk/WebCore/platform/efl/FileSystemEfl.cpp
+END
+PasteboardEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/efl/PasteboardEfl.cpp
+END
+SoundEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/63588/trunk/WebCore/platform/efl/SoundEfl.cpp
+END
+ScrollViewEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/55342/trunk/WebCore/platform/efl/ScrollViewEfl.cpp
+END
+TemporaryLinkStubs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/55342/trunk/WebCore/platform/efl/TemporaryLinkStubs.cpp
+END
+Language.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repository/webkit/!svn/ver/55328/trunk/WebCore/platform/efl/Language.cpp
+END
+PopupMenuEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/64513/trunk/WebCore/platform/efl/PopupMenuEfl.h
+END
+PlatformMouseEventEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/61331/trunk/WebCore/platform/efl/PlatformMouseEventEfl.cpp
+END
+SharedBufferEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/efl/SharedBufferEfl.cpp
+END
+SystemTimeEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repository/webkit/!svn/ver/55869/trunk/WebCore/platform/efl/SystemTimeEfl.cpp
+END
+ClipboardEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/65021/trunk/WebCore/platform/efl/ClipboardEfl.h
+END
+CookieJarEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/efl/CookieJarEfl.cpp
+END
+DragDataEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/64152/trunk/WebCore/platform/efl/DragDataEfl.cpp
+END
+SharedTimerEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/62015/trunk/WebCore/platform/efl/SharedTimerEfl.cpp
+END
+RenderThemeEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65813/trunk/WebCore/platform/efl/RenderThemeEfl.h
+END
+ScrollbarThemeEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/55793/trunk/WebCore/platform/efl/ScrollbarThemeEfl.h
+END
+PlatformWheelEventEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repository/webkit/!svn/ver/61331/trunk/WebCore/platform/efl/PlatformWheelEventEfl.cpp
+END
+KURLEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repository/webkit/!svn/ver/56023/trunk/WebCore/platform/efl/KURLEfl.cpp
+END
+SearchPopupMenuEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/64513/trunk/WebCore/platform/efl/SearchPopupMenuEfl.cpp
+END
+DragImageEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/55345/trunk/WebCore/platform/efl/DragImageEfl.cpp
+END
+WidgetEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repository/webkit/!svn/ver/63939/trunk/WebCore/platform/efl/WidgetEfl.cpp
+END
+PlatformScreenEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/56825/trunk/WebCore/platform/efl/PlatformScreenEfl.cpp
+END
+LoggingEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/63901/trunk/WebCore/platform/efl/LoggingEfl.cpp
+END
+ScrollbarEfl.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repository/webkit/!svn/ver/61331/trunk/WebCore/platform/efl/ScrollbarEfl.h
+END
+ContextMenuItemEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repository/webkit/!svn/ver/60454/trunk/WebCore/platform/efl/ContextMenuItemEfl.cpp
+END
+PopupMenuEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/66042/trunk/WebCore/platform/efl/PopupMenuEfl.cpp
+END
+ClipboardEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65077/trunk/WebCore/platform/efl/ClipboardEfl.cpp
+END
+FileChooserEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/61854/trunk/WebCore/platform/efl/FileChooserEfl.cpp
+END
+RenderThemeEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repository/webkit/!svn/ver/65813/trunk/WebCore/platform/efl/RenderThemeEfl.cpp
+END
+ScrollbarThemeEfl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/55342/trunk/WebCore/platform/efl/ScrollbarThemeEfl.cpp
+END

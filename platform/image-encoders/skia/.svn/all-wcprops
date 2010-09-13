@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repository/webkit/!svn/ver/63494/trunk/WebCore/platform/image-encoders/skia
+END
+PNGImageEncoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repository/webkit/!svn/ver/63494/trunk/WebCore/platform/image-encoders/skia/PNGImageEncoder.cpp
+END
+PNGImageEncoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repository/webkit/!svn/ver/40692/trunk/WebCore/platform/image-encoders/skia/PNGImageEncoder.h
+END

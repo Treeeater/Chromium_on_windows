@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repository/webkit/!svn/ver/66138/trunk/WebCore/plugins/gtk
+END
+PluginDataGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/61168/trunk/WebCore/plugins/gtk/PluginDataGtk.cpp
+END
+PluginViewGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repository/webkit/!svn/ver/65025/trunk/WebCore/plugins/gtk/PluginViewGtk.cpp
+END
+PluginPackageGtk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repository/webkit/!svn/ver/66138/trunk/WebCore/plugins/gtk/PluginPackageGtk.cpp
+END
+gtk2xtbin.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/38232/trunk/WebCore/plugins/gtk/gtk2xtbin.h
+END
+xembed.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repository/webkit/!svn/ver/32766/trunk/WebCore/plugins/gtk/xembed.h
+END
+gtk2xtbin.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repository/webkit/!svn/ver/65897/trunk/WebCore/plugins/gtk/gtk2xtbin.c
+END
