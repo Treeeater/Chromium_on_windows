@@ -146,6 +146,26 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
         if (!wrapper.IsEmpty())
             return wrapper;
     }
+	if (impl->isHTMLElement())
+	{
+		WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
+		if (NodeACL!="")
+		{
+			bool flag = false;
+			Vector<WTF::String> ACLs;
+			NodeACL.split(";",ACLs);
+			for (int i=0; i<ACLs.size(); i++)
+			{
+				if (worldID==ACLs[i].toInt())
+				{
+					break;
+				}
+				flag = true;
+			}
+			if (flag == true) return v8::Null();
+		}
+	}
+
     switch (impl->nodeType()) {
     case Node::ELEMENT_NODE:
         return toV8(static_cast<Element*>(impl), forceNewObject);
