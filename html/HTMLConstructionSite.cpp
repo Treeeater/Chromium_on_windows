@@ -294,6 +294,18 @@ void HTMLConstructionSite::insertScriptElement(AtomicHTMLToken& token)
     RefPtr<HTMLScriptElement> element = HTMLScriptElement::create(scriptTag, m_document, true);
     if (m_fragmentScriptingPermission == FragmentScriptingAllowed)
         element->setAttributeMap(token.takeAtributes(), m_fragmentScriptingPermission);
+	//zyc
+	unsigned scriptHash = 0;
+	String a = element->textContent(false);
+	scriptHash = StringImpl::computeHash(a.utf8().data(),a.utf8().length());
+	std::ostringstream oss;
+	oss << scriptHash;
+	std::string scriptHashString = oss.str();
+	AtomicString AS1("scripthash");
+	AtomicString AS2(scriptHashString.c_str());
+	RefPtr<Attribute> scriptnewattr = Attribute::createMapped(AS1,AS2,true);
+	element->attributes()->addAttribute(scriptnewattr);
+	//done zyc;
     m_openElements.push(attachToCurrent(element.release()));
 }
 

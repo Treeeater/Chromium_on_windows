@@ -337,6 +337,15 @@ namespace WebCore {
         // Report an unsafe attempt to access the given frame on the console.
         static void reportUnsafeAccessTo(Frame* target, DelayReporting delay);
 
+		//zyc
+		HashMap<int, V8IsolatedContext*> getIWMap() { return m_isolatedWorlds; }
+
+		void addWorldToMap(int targetID, V8IsolatedContext* context) { m_isolatedWorlds.add(targetID, context); }
+
+//		HashMap<V8IsolatedContext*, int> getRMap() { return m_reverseMap; }
+
+//		void addWorldToRMap(V8IsolatedContext* context, int targetID) { m_reverseMap.add(context, targetID); }
+
     private:
         void didLeaveScriptContext();
 

@@ -166,7 +166,9 @@ void HTMLScriptRunner::executeScript(Element* element, const ScriptSourceCode& s
     ASSERT(isExecutingScript());
     if (!m_document->frame())
         return;
-    m_document->frame()->script()->executeScript(sourceCode);
+	String shouldExecuteInIsolatedWorld = element->getAttribute("worldID");
+	if (!shouldExecuteInIsolatedWorld) shouldExecuteInIsolatedWorld="";
+	m_document->frame()->script()->executeScript(sourceCode, (ShouldAllowXSS) false, shouldExecuteInIsolatedWorld);
 }
 
 void HTMLScriptRunner::watchForLoad(PendingScript& pendingScript)

@@ -54,7 +54,10 @@ public:
     {
         return adoptRef(new Attribute(name, value, true, 0));
     }
-
+	static PassRefPtr<Attribute> createMapped(const AtomicString& name, const AtomicString& value, bool zycReadOnly)
+	{
+		return adoptRef(new Attribute(name, value, true, 0, zycReadOnly));
+	}
     const AtomicString& value() const { return m_value; }
     const AtomicString& prefix() const { return m_name.prefix(); }
     const AtomicString& localName() const { return m_name.localName(); }
@@ -75,8 +78,14 @@ public:
     CSSMappedAttributeDeclaration* decl() const { return m_styleDecl.get(); }
     void setDecl(PassRefPtr<CSSMappedAttributeDeclaration> decl) { m_styleDecl = decl; }
 
-    void setValue(const AtomicString& value) { m_value = value; }
-    void setPrefix(const AtomicString& prefix) { m_name.setPrefix(prefix); }
+    void setValue(const AtomicString& value)
+	{
+		if (!m_readOnly) m_value = value;
+	}
+    void setPrefix(const AtomicString& prefix)
+	{ 
+		if (!m_readOnly) m_name.setPrefix(prefix); 
+	}
 
     // Note: This API is only for HTMLTreeBuilder.  It is not safe to change the
     // name of an attribute once parseMappedAttribute has been called as DOM
@@ -92,8 +101,19 @@ private:
         , m_name(name)
         , m_value(value)
         , m_styleDecl(styleDecl)
+		, m_readOnly(false)
     {
     }
+
+	Attribute(const QualifiedName& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl, bool zycReadOnly)
+		: m_isMappedAttribute(isMappedAttribute)
+		, m_hasAttr(false)
+		, m_name(name)
+		, m_value(value)
+		, m_styleDecl(styleDecl)
+		, m_readOnly(zycReadOnly)
+	{
+	}
 
     Attribute(const AtomicString& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl)
         : m_isMappedAttribute(isMappedAttribute)
@@ -101,8 +121,19 @@ private:
         , m_name(nullAtom, name, nullAtom)
         , m_value(value)
         , m_styleDecl(styleDecl)
+		, m_readOnly(false)
     {
     }
+
+	Attribute(const AtomicString& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl, bool zycReadOnly)
+		: m_isMappedAttribute(isMappedAttribute)
+		, m_hasAttr(false)
+		, m_name(nullAtom, name, nullAtom)
+		, m_value(value)
+		, m_styleDecl(styleDecl)
+		, m_readOnly(zycReadOnly)
+	{
+	}
 
     void bindAttr(Attr*);
     void unbindAttr(Attr*);
@@ -114,6 +145,9 @@ private:
     QualifiedName m_name;
     AtomicString m_value;
     RefPtr<CSSMappedAttributeDeclaration> m_styleDecl;
+	//modified by zyc:
+	bool m_readOnly;
+	//done modifying.
 };
 
 } // namespace WebCore

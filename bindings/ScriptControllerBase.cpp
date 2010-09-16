@@ -49,15 +49,16 @@ ScriptValue ScriptController::executeScript(const String& script, bool forceUser
     return executeScript(ScriptSourceCode(script, forceUserGesture ? KURL() : m_frame->loader()->url()), shouldAllowXSS);
 }
 
-ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS)
+ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld)
 {
+	ScriptValue result;
     if (!canExecuteScripts(AboutToExecuteScript) || isPaused())
         return ScriptValue();
 
     bool wasInExecuteScript = m_inExecuteScript;
     m_inExecuteScript = true;
 
-    ScriptValue result = evaluate(sourceCode, shouldAllowXSS);
+	result = evaluate(sourceCode, shouldAllowXSS, shouldExecuteInIsolatedWorld);
 
     if (!wasInExecuteScript) {
         m_inExecuteScript = false;

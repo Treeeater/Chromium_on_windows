@@ -222,7 +222,7 @@ void ScriptController::evaluateInIsolatedWorld(unsigned worldID, const Vector<Sc
 }
 
 // Evaluate a script file in the environment of this proxy.
-ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS)
+ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld)
 {
     String sourceURL = sourceCode.url();
     const String* savedSourceURL = m_sourceURL;
@@ -232,9 +232,28 @@ ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, Shoul
         // This script is not safe to be evaluated.
         return ScriptValue();
     }
-
     v8::HandleScope handleScope;
-    v8::Handle<v8::Context> v8Context = V8Proxy::mainWorldContext(m_proxy->frame());
+	v8::Handle<v8::Context> v8Context;
+	if (shouldExecuteInIsolatedWorld=="")
+	{	
+		v8Context = V8Proxy::mainWorldContext(m_proxy->frame());
+	}
+	else
+	{
+		int targetworldID = shouldExecuteInIsolatedWorld.toInt();
+		if (m_proxy->getIWMap().contains(targetworldID))
+		{
+			V8IsolatedContext* isolatedContext = m_proxy->getIWMap().get(targetworldID);
+			v8Context = v8::Local<v8::Context>::New(isolatedContext->context());
+		}
+		else
+		{
+			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID);
+			v8Context = v8::Local<v8::Context>::New(isolatedContext->context());
+			m_proxy->addWorldToMap(targetworldID,isolatedContext);
+		}
+	}
+
     if (v8Context.IsEmpty())
         return ScriptValue();
 

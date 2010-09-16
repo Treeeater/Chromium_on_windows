@@ -58,7 +58,7 @@ class V8IsolatedContext {
 public:
     // Creates an isolated world. To destroy it, call destroy().
     // This will delete the isolated world when the context it owns is GC'd.
-    V8IsolatedContext(V8Proxy* proxy, int extensionGroup);
+    V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID=0);
     ~V8IsolatedContext();
 
     // Call this to destroy the isolated world. It will be deleted sometime
@@ -92,7 +92,8 @@ public:
     PassRefPtr<SharedPersistent<v8::Context> > sharedContext() { return m_context; }
 
     IsolatedWorld* world() const { return m_world.get(); }
-
+	int getWorldID() { return m_worldID; }
+	void setWorldID(int WID) { m_worldID = WID; }
 private:
     static v8::Handle<v8::Object> getGlobalObject(v8::Handle<v8::Context> context)
     {
@@ -108,6 +109,7 @@ private:
     RefPtr<SharedPersistent<v8::Context> > m_context;
 
     RefPtr<IsolatedWorld> m_world;
+	int m_worldID;
 };
 
 } // namespace WebCore

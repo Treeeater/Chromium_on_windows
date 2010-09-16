@@ -65,7 +65,7 @@ public:
     // or this accessor should be made JSProxy*
     V8Proxy* proxy() { return m_proxy.get(); }
 
-    ScriptValue executeScript(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS);
+    ScriptValue executeScript(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld = "");
     ScriptValue executeScript(const String& script, bool forceUserGesture = false, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS);
 
     // Returns true if argument is a JavaScript URL.
@@ -77,7 +77,7 @@ public:
     // Evaluate a script file in the environment of this proxy.
     // If succeeded, 'succ' is set to true and result is returned
     // as a string.
-    ScriptValue evaluate(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS);
+    ScriptValue evaluate(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld="");
 
     void evaluateInIsolatedWorld(unsigned worldID, const Vector<ScriptSourceCode>&);
 

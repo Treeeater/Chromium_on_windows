@@ -52,11 +52,13 @@
 #include "V8ProcessingInstruction.h"
 #include "V8Proxy.h"
 #include "V8Text.h"
+#include "V8IsolatedContext.h"
 
 #include <wtf/RefPtr.h>
 
 namespace WebCore {
 
+class V8IsolatedContext;
 // This function is customized to take advantage of the optional 4th argument: shouldLazyAttach
 v8::Handle<v8::Value> V8Node::insertBeforeCallback(const v8::Arguments& args)
 {
@@ -132,6 +134,10 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
 
 v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 {
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+
     if (!impl)
         return v8::Null();
 

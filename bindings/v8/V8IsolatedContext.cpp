@@ -49,9 +49,10 @@ void V8IsolatedContext::contextWeakReferenceCallback(v8::Persistent<v8::Value> o
     delete context;
 }
 
-V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup)
+V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID)
     : m_world(IsolatedWorld::create())
 {
+	m_worldID = WID;
     v8::HandleScope scope;
     // FIXME: We should be creating a new V8DOMWindowShell here instead of riping out the context.
     m_context = SharedPersistent<v8::Context>::create(proxy->windowShell()->createNewContext(v8::Handle<v8::Object>(), extensionGroup));
