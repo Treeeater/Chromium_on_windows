@@ -45,6 +45,7 @@
 #include "V8BindingState.h"
 #include "V8HTMLElement.h"
 #include "V8Proxy.h"
+#include "V8IsolatedContext.h"
 
 #if ENABLE(SVG)
 #include "V8SVGElement.h"
@@ -56,8 +57,33 @@ namespace WebCore {
 
 v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 {
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+
     if (!impl)
         return v8::Null();
+
+	if (impl->isHTMLElement())
+	{
+		WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
+		if (NodeACL!="")
+		{
+			bool flag = false;
+			Vector<WTF::String> ACLs;
+			NodeACL.split(";",ACLs);
+			for (int i=0; i<ACLs.size(); i++)
+			{
+				if (worldID==ACLs[i].toInt())
+				{
+					break;
+				}
+				flag = true;
+			}
+			if (flag == true) return v8::Null();
+		}
+	}
+
     if (impl->isHTMLElement())
         return toV8(static_cast<HTMLElement*>(impl), forceNewObject);
 #if ENABLE(SVG)

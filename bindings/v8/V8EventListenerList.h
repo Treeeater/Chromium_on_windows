@@ -86,6 +86,10 @@ namespace WebCore {
         if (!value->IsObject())
             return 0;
 
+		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+		int worldID = 0;
+		if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+
         v8::Local<v8::Object> object = v8::Local<v8::Object>::Cast(value);
         v8::Handle<v8::String> wrapperProperty = getHiddenProperty(isAttribute);
 
@@ -95,7 +99,10 @@ namespace WebCore {
 
         PassRefPtr<V8EventListener> wrapperPtr = WrapperType::create(object, isAttribute, WorldContextHandle(UseCurrentWorld));
         if (wrapperPtr)
+		{
+			wrapperPtr->setWorldID(worldID);
             object->SetHiddenValue(wrapperProperty, v8::External::Wrap(wrapperPtr.get()));
+		}
 
         return wrapperPtr;
     }

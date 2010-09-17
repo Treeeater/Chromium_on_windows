@@ -58,7 +58,8 @@ namespace WebCore {
 
         bool isAttribute() const { return virtualisAttribute(); }
         Type type() const { return m_type; }
-
+		void setWorldID(int wid) { worldID = wid; }
+		int getWorldID() { return worldID; }
     protected:
         EventListener(Type type)
             : m_type(type)
@@ -69,6 +70,7 @@ namespace WebCore {
         virtual bool virtualisAttribute() const { return false; }
         
         Type m_type;
+		int worldID;
     };
 
 }

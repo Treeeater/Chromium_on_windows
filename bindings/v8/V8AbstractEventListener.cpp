@@ -43,6 +43,7 @@
 #include "V8Utilities.h"
 #include "WorkerContext.h"
 #include "WorkerContextExecutionProxy.h"
+#include "V8IsolatedContext.h"
 
 namespace WebCore {
 
@@ -79,9 +80,23 @@ void V8AbstractEventListener::handleEvent(ScriptExecutionContext* context, Event
     RefPtr<V8AbstractEventListener> protect(this);
 
     v8::HandleScope handleScope;
+	
+	int worldID = this->getWorldID();
 
-    v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
-    if (v8Context.IsEmpty())
+    //v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
+	v8::Handle<v8::Context> v8Context;
+	V8Proxy* proxy = V8Proxy::retrieve(context);
+	if (proxy->getIWMap().contains(worldID)&&(worldID!=0))
+	{
+		V8IsolatedContext* IsolatedContext = proxy->getIWMap().get(worldID);
+		v8Context = IsolatedContext->context();
+	}
+	else
+	{
+		v8Context = toV8Context(context, worldContext());
+	}
+
+	if (v8Context.IsEmpty())
         return;
 
     // Enter the V8 context in which to perform the event handling.
