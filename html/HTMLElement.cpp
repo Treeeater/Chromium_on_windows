@@ -164,7 +164,10 @@ void HTMLElement::parseMappedAttribute(Attribute* attr)
     }
 // standard events
     else if (attr->name() == onclickAttr) {
-        setAttributeEventListener(eventNames().clickEvent, createAttributeEventListener(this, attr));
+		//zyc
+		RefPtr<V8LazyEventListener> eventlistner = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistner->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().clickEvent, eventlistner);
     } else if (attr->name() == oncontextmenuAttr) {
         setAttributeEventListener(eventNames().contextmenuEvent, createAttributeEventListener(this, attr));
     } else if (attr->name() == ondblclickAttr) {

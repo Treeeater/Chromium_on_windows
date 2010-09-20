@@ -533,7 +533,7 @@ const AtomicString& Element::getAttributeNS(const String& namespaceURI, const St
     return getAttribute(QualifiedName(nullAtom, localName, namespaceURI));
 }
 
-void Element::setAttribute(const AtomicString& name, const AtomicString& value, ExceptionCode& ec)
+void Element::setAttribute(const AtomicString& name, const AtomicString& value, ExceptionCode& ec, int worldID)
 {
     if (!Document::isValidName(name)) {
         ec = INVALID_CHARACTER_ERR;
@@ -556,7 +556,18 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
     if (old && value.isNull())
         m_attributeMap->removeAttribute(old->name());
     else if (!old && !value.isNull())
-        m_attributeMap->addAttribute(createAttribute(QualifiedName(nullAtom, localName, nullAtom), value));
+	{
+		if (worldID==0)
+		{
+			m_attributeMap->addAttribute(createAttribute(QualifiedName(nullAtom, localName, nullAtom), value));
+		}
+		else
+		{
+			RefPtr<Attribute> att = createAttribute(QualifiedName(nullAtom, localName, nullAtom), value);
+			att->setWorldID(worldID);
+			m_attributeMap->addAttribute(att);
+		}
+	}
     else if (old && !value.isNull()) {
         old->setValue(value);
         attributeChanged(old);

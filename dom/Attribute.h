@@ -91,7 +91,8 @@ public:
     // name of an attribute once parseMappedAttribute has been called as DOM
     // elements may have placed the Attribute in a hash by name.
     void parserSetName(const QualifiedName& name) { m_name = name; }
-
+	int getWorldID() { return m_worldID; }
+	void setWorldID(int wid) { m_worldID = wid; }
     bool isMappedAttribute() { return m_isMappedAttribute; }
 
 private:
@@ -147,6 +148,7 @@ private:
     RefPtr<CSSMappedAttributeDeclaration> m_styleDecl;
 	//modified by zyc:
 	bool m_readOnly;
+	int m_worldID;
 	//done modifying.
 };
 

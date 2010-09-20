@@ -36,7 +36,7 @@
 #include "V8HiddenPropertyName.h"
 #include "V8Proxy.h"
 #include "WorldContextHandle.h"
-
+#include "V8IsolatedContext.h"
 #include <wtf/StdLibExtras.h>
 
 namespace WebCore {
@@ -88,7 +88,16 @@ void V8LazyEventListener::prepareListenerObject(ScriptExecutionContext* context)
         return;
 
     // Use the outer scope to hold context.
-    v8::Local<v8::Context> v8Context = worldContext().adjustedContext(proxy);
+	v8::Handle<v8::Context> v8Context;
+	int wid = this->getWorldID();
+	if (wid==0)
+	{
+		v8Context = worldContext().adjustedContext(proxy);
+	}
+	else
+	{
+		v8Context = (proxy->getIWMap().get(wid))->context();
+	}
     // Bail out if we cannot get the context.
     if (v8Context.IsEmpty())
         return;

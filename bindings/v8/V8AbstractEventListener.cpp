@@ -86,7 +86,7 @@ void V8AbstractEventListener::handleEvent(ScriptExecutionContext* context, Event
     //v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
 	v8::Handle<v8::Context> v8Context;
 	V8Proxy* proxy = V8Proxy::retrieve(context);
-	if (proxy->getIWMap().contains(worldID)&&(worldID!=0))
+	if ((worldID!=0)&&(proxy->getIWMap().contains(worldID)))
 	{
 		V8IsolatedContext* IsolatedContext = proxy->getIWMap().get(worldID);
 		v8Context = IsolatedContext->context();
@@ -137,7 +137,21 @@ void V8AbstractEventListener::invokeEventHandler(ScriptExecutionContext* context
     if (jsEvent.IsEmpty())
         return;
 
-    v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
+	int worldID = this->getWorldID();
+
+	//v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
+	v8::Handle<v8::Context> v8Context;
+	V8Proxy* proxy = V8Proxy::retrieve(context);
+	if ((worldID!=0)&&(proxy->getIWMap().contains(worldID)))
+	{
+		V8IsolatedContext* IsolatedContext = proxy->getIWMap().get(worldID);
+		v8Context = IsolatedContext->context();
+	}
+	else
+	{
+		v8Context = toV8Context(context, worldContext());
+	}
+
     if (v8Context.IsEmpty())
         return;
 
