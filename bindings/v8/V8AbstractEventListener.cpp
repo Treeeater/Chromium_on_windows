@@ -138,7 +138,6 @@ void V8AbstractEventListener::invokeEventHandler(ScriptExecutionContext* context
         return;
 
 	int worldID = this->getWorldID();
-
 	//v8::Local<v8::Context> v8Context = toV8Context(context, worldContext());
 	v8::Handle<v8::Context> v8Context;
 	V8Proxy* proxy = V8Proxy::retrieve(context);

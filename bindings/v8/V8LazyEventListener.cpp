@@ -90,7 +90,7 @@ void V8LazyEventListener::prepareListenerObject(ScriptExecutionContext* context)
     // Use the outer scope to hold context.
 	v8::Handle<v8::Context> v8Context;
 	int wid = this->getWorldID();
-	if (wid==0)
+	if ((wid==0)||(!proxy->getIWMap().contains(wid)))
 	{
 		v8Context = worldContext().adjustedContext(proxy);
 	}

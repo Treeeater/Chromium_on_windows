@@ -67,7 +67,7 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 	if (impl->isHTMLElement())
 	{
 		WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
-		if (NodeACL!="")
+		if ((NodeACL!=0)&&(NodeACL!=""))
 		{
 			bool flag = false;
 			Vector<WTF::String> ACLs;

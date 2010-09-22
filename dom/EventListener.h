@@ -64,6 +64,7 @@ namespace WebCore {
         EventListener(Type type)
             : m_type(type)
         {
+			worldID = 0;
         }
 
     private:

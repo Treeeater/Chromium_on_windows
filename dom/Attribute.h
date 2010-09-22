@@ -104,6 +104,7 @@ private:
         , m_styleDecl(styleDecl)
 		, m_readOnly(false)
     {
+		m_worldID=0;
     }
 
 	Attribute(const QualifiedName& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl, bool zycReadOnly)
@@ -114,6 +115,7 @@ private:
 		, m_styleDecl(styleDecl)
 		, m_readOnly(zycReadOnly)
 	{
+		m_worldID=0;
 	}
 
     Attribute(const AtomicString& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl)
@@ -124,6 +126,7 @@ private:
         , m_styleDecl(styleDecl)
 		, m_readOnly(false)
     {
+		m_worldID=0;
     }
 
 	Attribute(const AtomicString& name, const AtomicString& value, bool isMappedAttribute, CSSMappedAttributeDeclaration* styleDecl, bool zycReadOnly)
@@ -134,6 +137,7 @@ private:
 		, m_styleDecl(styleDecl)
 		, m_readOnly(zycReadOnly)
 	{
+		m_worldID=0;
 	}
 
     void bindAttr(Attr*);
