@@ -44,6 +44,7 @@
 #include "V8IsolatedContext.h"
 #include "V8Node.h"
 #include "V8Proxy.h"
+#include "V8Document.h"
 #include <wtf/RefPtr.h>
 #include <wtf/StdLibExtras.h>
 
@@ -113,6 +114,8 @@ v8::Handle<v8::Value> V8HTMLDocument::writeCallback(const v8::Arguments& args)
     INC_STATS("DOM.HTMLDocument.write()");
     HTMLDocument* htmlDocument = V8HTMLDocument::toNative(args.Holder());
     Frame* frame = V8Proxy::retrieveFrameForCallingContext();
+	WTF::String ACLname = "writeACL";
+	if (!security_check(htmlDocument,ACLname)) return v8::Undefined();
     htmlDocument->write(writeHelperGetString(args), frame ? frame->document() : NULL);
     return v8::Undefined();
 }
@@ -122,6 +125,8 @@ v8::Handle<v8::Value> V8HTMLDocument::writelnCallback(const v8::Arguments& args)
     INC_STATS("DOM.HTMLDocument.writeln()");
     HTMLDocument* htmlDocument = V8HTMLDocument::toNative(args.Holder());
     Frame* frame = V8Proxy::retrieveFrameForCallingContext();
+	WTF::String ACLname = "writeACL";										//currently the writeln has the same privilege with write
+	if (!security_check(htmlDocument,ACLname)) return v8::Undefined();
     htmlDocument->writeln(writeHelperGetString(args), frame ? frame->document() : NULL);
     return v8::Undefined();
 }
@@ -130,6 +135,8 @@ v8::Handle<v8::Value> V8HTMLDocument::openCallback(const v8::Arguments& args)
 {
     INC_STATS("DOM.HTMLDocument.open()");
     HTMLDocument* htmlDocument = V8HTMLDocument::toNative(args.Holder());
+	WTF::String ACLname = "openACL";
+	if (!security_check(htmlDocument,ACLname)) return v8::Undefined();
 
     if (args.Length() > 2) {
         if (Frame* frame = htmlDocument->frame()) {

@@ -72,7 +72,7 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 			bool flag = false;
 			Vector<WTF::String> ACLs;
 			NodeACL.split(";",ACLs);
-			for (int i=0; i<ACLs.size(); i++)
+			for (unsigned int i=0; i<ACLs.size(); i++)
 			{
 				if (worldID==ACLs[i].toInt())
 				{
