@@ -196,7 +196,17 @@ void HTMLAnchorElement::defaultEventHandler(Event* evt)
         }
 
         if (!evt->defaultPrevented() && document()->frame())
-            document()->frame()->loader()->urlSelected(document()->completeURL(url), getAttribute(targetAttr), evt, false, false, true, hasRel(RelationNoReferrer) ? NoReferrer : SendReferrer);
+		{
+			String worldID = this->getAttribute("worldID");
+			if ((worldID==NULL)||(worldID == ""))
+			{
+				document()->frame()->loader()->urlSelected(document()->completeURL(url), getAttribute(targetAttr), evt, false, false, true, hasRel(RelationNoReferrer) ? NoReferrer : SendReferrer);
+			}
+			else
+			{
+				document()->frame()->loader()->urlSelected(document()->completeURL(url), getAttribute(targetAttr), evt, false, false, true, hasRel(RelationNoReferrer) ? NoReferrer : SendReferrer, worldID);
+			}
+		}
 
         evt->setDefaultHandled();
     } else if (isLink() && isContentEditable()) {

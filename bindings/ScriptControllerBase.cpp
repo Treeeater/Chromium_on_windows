@@ -44,9 +44,9 @@ bool ScriptController::canExecuteScripts(ReasonForCallingCanExecuteScripts reaso
     return allowed;
 }
 
-ScriptValue ScriptController::executeScript(const String& script, bool forceUserGesture, ShouldAllowXSS shouldAllowXSS)
+ScriptValue ScriptController::executeScript(const String& script, bool forceUserGesture, ShouldAllowXSS shouldAllowXSS, String worldID)
 {
-    return executeScript(ScriptSourceCode(script, forceUserGesture ? KURL() : m_frame->loader()->url()), shouldAllowXSS);
+    return executeScript(ScriptSourceCode(script, forceUserGesture ? KURL() : m_frame->loader()->url()), shouldAllowXSS, worldID);
 }
 
 ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld)
@@ -68,7 +68,7 @@ ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, 
     return result;
 }
 
-bool ScriptController::executeIfJavaScriptURL(const KURL& url, bool userGesture, ShouldReplaceDocumentIfJavaScriptURL shouldReplaceDocumentIfJavaScriptURL)
+bool ScriptController::executeIfJavaScriptURL(const KURL& url, bool userGesture, ShouldReplaceDocumentIfJavaScriptURL shouldReplaceDocumentIfJavaScriptURL, String worldID)
 {
     if (!protocolIsJavaScript(url))
         return false;
@@ -91,7 +91,7 @@ bool ScriptController::executeIfJavaScriptURL(const KURL& url, bool userGesture,
     String decodedURL = decodeURLEscapeSequences(url.string());
     ScriptValue result;
     if (xssAuditor()->canEvaluateJavaScriptURL(decodedURL))
-        result = executeScript(decodedURL.substring(javascriptSchemeLength), userGesture, AllowXSS);
+        result = executeScript(decodedURL.substring(javascriptSchemeLength), userGesture, AllowXSS, worldID);
 
     // If executing script caused this frame to be removed from the page, we
     // don't want to try to replace its document!
