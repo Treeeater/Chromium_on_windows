@@ -73,7 +73,15 @@ void ScriptElement::insertedIntoDocument(ScriptElementData& data, const String& 
     // If there's an empty script node, we shouldn't evaluate the script
     // because if a script is inserted afterwards (by setting text or innerText)
     // it should be evaluated, and evaluateScript only evaluates a script once.
-    data.evaluateScript(ScriptSourceCode(data.scriptContent(), data.element()->document()->url())); // FIXME: Provide a real starting line number here.
+	String worldID = data.element()->getAttribute("worldID");
+	if ((worldID == NULL)||(worldID == ""))
+	{
+		data.evaluateScript(ScriptSourceCode(data.scriptContent(), data.element()->document()->url())); // FIXME: Provide a real starting line number here.
+	}
+	else
+	{
+		data.evaluateScript(ScriptSourceCode(data.scriptContent(), data.element()->document()->url()),worldID); // FIXME: Provide a real starting line number here.
+	}
 }
 
 void ScriptElement::removedFromDocument(ScriptElementData& data)
@@ -186,7 +194,7 @@ void ScriptElementData::requestScript(const String& sourceUrl)
     m_scriptElement->dispatchErrorEvent();
 }
 
-void ScriptElementData::evaluateScript(const ScriptSourceCode& sourceCode)
+void ScriptElementData::evaluateScript(const ScriptSourceCode& sourceCode, String worldID)
 {
     if (m_evaluated || sourceCode.isEmpty() || !shouldExecuteAsJavaScript())
         return;
@@ -211,7 +219,7 @@ void ScriptElementData::evaluateScript(const ScriptSourceCode& sourceCode)
         // Create a script from the script element node, using the script
         // block's source and the script block's type.
         // Note: This is where the script is compiled and actually executed.
-        frame->script()->evaluate(sourceCode);
+        frame->script()->evaluate(sourceCode,(ShouldAllowXSS)false,worldID);
 
         // Remove the "write-neutralised" flag from neutralised doc, if it was
         // set in the earlier step.

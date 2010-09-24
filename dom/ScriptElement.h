@@ -88,7 +88,7 @@ public:
     void setHaveFiredLoadEvent(bool firedLoad) { m_firedLoad = firedLoad; }
 
     void requestScript(const String& sourceUrl);
-    void evaluateScript(const ScriptSourceCode&);
+    void evaluateScript(const ScriptSourceCode&, String worldID = "");
     void stopLoadRequest();
 
     void execute(CachedScript*);
