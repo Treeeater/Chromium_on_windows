@@ -61,12 +61,40 @@ using namespace std;
 namespace WebCore {
 
 class V8IsolatedContext;
+
+bool RO_check(Node *imp)
+{
+	if (imp->isHTMLElement())
+	{
+		String ROACL = ((Element*) imp)->getAttribute("ROACL");
+		if ((ROACL != NULL)&&(ROACL != ""))
+		{
+			int worldID = 0;
+			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+			Vector<WTF::String> ACLs;
+			ROACL.split(";",ACLs);
+			for (unsigned int i=0; i<ACLs.size(); i++)
+			{
+				if (worldID==ACLs[i].toInt())
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		return true;
+	}
+	return true;
+}
+
 // This function is customized to take advantage of the optional 4th argument: shouldLazyAttach
 v8::Handle<v8::Value> V8Node::insertBeforeCallback(const v8::Arguments& args)
 {
     INC_STATS("DOM.Node.insertBefore");
     v8::Handle<v8::Object> holder = args.Holder();
     Node* imp = V8Node::toNative(holder);
+	if (!RO_check(imp)) return v8::Null();
     ExceptionCode ec = 0;
     Node* newChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
     Node* refChild = V8Node::HasInstance(args[1]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[1])) : 0;
@@ -86,6 +114,7 @@ v8::Handle<v8::Value> V8Node::replaceChildCallback(const v8::Arguments& args)
     INC_STATS("DOM.Node.replaceChild");
     v8::Handle<v8::Object> holder = args.Holder();
     Node* imp = V8Node::toNative(holder);
+	if (!RO_check(imp)) return v8::Null();
     ExceptionCode ec = 0;
     Node* newChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
     Node* oldChild = V8Node::HasInstance(args[1]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[1])) : 0;
@@ -104,6 +133,7 @@ v8::Handle<v8::Value> V8Node::removeChildCallback(const v8::Arguments& args)
     INC_STATS("DOM.Node.removeChild");
     v8::Handle<v8::Object> holder = args.Holder();
     Node* imp = V8Node::toNative(holder);
+	if (!RO_check(imp)) return v8::Null();
     ExceptionCode ec = 0;
     Node* oldChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
     bool success = imp->removeChild(oldChild, ec);
@@ -122,6 +152,7 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
     INC_STATS("DOM.Node.appendChild");
     v8::Handle<v8::Object> holder = args.Holder();
     Node* imp = V8Node::toNative(holder);
+	if (!RO_check(imp)) return v8::Null();
     ExceptionCode ec = 0;
     Node* newChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
 	int worldID = 0;
@@ -206,4 +237,5 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
     }
     return V8Node::wrap(impl, forceNewObject);
 }
+
 } // namespace WebCore
