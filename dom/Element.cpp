@@ -53,6 +53,8 @@
 #include "Settings.h"
 #include "TextIterator.h"
 #include "XMLNames.h"
+#include "V8IsolatedContext.h"
+#include "V8Binding.h"
 #include <wtf/text/CString.h>
 
 #if ENABLE(SVG)
@@ -540,6 +542,8 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
         return;
     }
 
+	if (!RO_check(this)) return;
+
     const AtomicString& localName = shouldIgnoreAttributeCase(this) ? name.lower() : name;
 
     // Allocate attribute map if necessary.
@@ -585,6 +589,7 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
 
 void Element::setAttribute(const QualifiedName& name, const AtomicString& value, ExceptionCode&)
 {
+	if (!RO_check(this)) return;
     document()->incDOMTreeVersion();
 
     // Allocate attribute map if necessary.

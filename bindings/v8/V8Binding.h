@@ -202,11 +202,10 @@ namespace WebCore {
 
     v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo&,
                                                const QualifiedName&);
+	bool RO_check(Node *imp);
     void setElementStringAttr(const v8::AccessorInfo&,
                               const QualifiedName&,
                               v8::Local<v8::Value>);
-
-
     v8::Persistent<v8::String> getToStringName();
     v8::Persistent<v8::FunctionTemplate> getToStringTemplate();
 

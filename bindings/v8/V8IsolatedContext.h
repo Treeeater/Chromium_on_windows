@@ -32,6 +32,7 @@
 #define V8IsolatedContext_h
 
 #include "IsolatedWorld.h"
+#include "Element.h"
 #include "ScriptSourceCode.h" // for WebCore::ScriptSourceCode
 #include "V8DOMWindow.h"
 #include "V8Proxy.h"

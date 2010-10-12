@@ -62,32 +62,6 @@ namespace WebCore {
 
 class V8IsolatedContext;
 
-bool RO_check(Node *imp)
-{
-	if (imp->isHTMLElement())
-	{
-		String ROACL = ((Element*) imp)->getAttribute("ROACL");
-		if ((ROACL != NULL)&&(ROACL != ""))
-		{
-			int worldID = 0;
-			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
-			Vector<WTF::String> ACLs;
-			ROACL.split(";",ACLs);
-			for (unsigned int i=0; i<ACLs.size(); i++)
-			{
-				if (worldID==ACLs[i].toInt())
-				{
-					return true;
-				}
-			}
-			return false;
-		}
-		return true;
-	}
-	return true;
-}
-
 // This function is customized to take advantage of the optional 4th argument: shouldLazyAttach
 v8::Handle<v8::Value> V8Node::insertBeforeCallback(const v8::Arguments& args)
 {

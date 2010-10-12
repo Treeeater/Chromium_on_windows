@@ -39,6 +39,7 @@
 #include "Threading.h"
 #include "V8Element.h"
 #include "V8Proxy.h"
+#include "V8IsolatedContext.h"
 #include <wtf/text/AtomicString.h>
 #include <wtf/text/CString.h>
 #include <wtf/text/StringBuffer.h>
@@ -554,12 +555,41 @@ v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo& info,
     return v8ExternalString(imp->getAttribute(name));
 }
 
+bool RO_check(Node *imp)
+{
+	if (imp->isHTMLElement())
+	{
+		String ROACL = ((Element*) imp)->getAttribute("ROACL");
+		if ((ROACL != NULL)&&(ROACL != ""))
+		{
+			int worldID = 0;
+			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+			Vector<WTF::String> ACLs;
+			ROACL.split(";",ACLs);
+			for (unsigned int i=0; i<ACLs.size(); i++)
+			{
+				if (worldID==ACLs[i].toInt())
+				{
+					ACLs.clear();
+					return true;
+				}
+			}
+			ACLs.clear();
+			return false;
+		}
+		return true;
+	}
+	return true;
+}
+
 void setElementStringAttr(const v8::AccessorInfo& info,
                           const QualifiedName& name,
                           v8::Local<v8::Value> value)
 {
     Element* imp = V8Element::toNative(info.Holder());
     AtomicString v = toAtomicWebCoreStringWithNullCheck(value);
+	//if (!RO_check(imp)) return;
     imp->setAttribute(name, v);
 }
 
