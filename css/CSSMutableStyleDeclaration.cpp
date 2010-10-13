@@ -32,6 +32,7 @@
 #include "Document.h"
 #include "ExceptionCode.h"
 #include "StyledElement.h"
+#include "V8Binding.h"
 
 using namespace std;
 
@@ -514,6 +515,7 @@ bool CSSMutableStyleDeclaration::isPropertyImplicit(int propertyID) const
 void CSSMutableStyleDeclaration::setProperty(int propertyID, const String& value, bool important, ExceptionCode& ec)
 {
     ec = 0;
+	if (!RO_check(m_node)) return;
     setProperty(propertyID, value, important, true);
 }
 
