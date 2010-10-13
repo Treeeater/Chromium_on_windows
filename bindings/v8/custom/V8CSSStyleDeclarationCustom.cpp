@@ -39,6 +39,7 @@
 
 #include "V8Binding.h"
 #include "V8Proxy.h"
+#include "V8Element.h"
 
 #include <wtf/ASCIICType.h>
 #include <wtf/PassRefPtr.h>
@@ -194,6 +195,8 @@ v8::Handle<v8::Value> V8CSSStyleDeclaration::namedPropertySetter(v8::Local<v8::S
 {
     INC_STATS("DOM.CSSStyleDeclaration.NamedPropertySetter");
     CSSStyleDeclaration* imp = V8CSSStyleDeclaration::toNative(info.Holder());
+	//Element* imp2 = V8Element::toNative(info.Holder());
+	//if (!RO_check(imp2)) return v8::Handle<v8::Value>();
     CSSPropertyInfo* propInfo = cssPropertyInfo(name);
     if (!propInfo)
         return notHandledByInterceptor();

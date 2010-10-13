@@ -557,6 +557,7 @@ v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo& info,
 
 bool RO_check(Node *imp)
 {
+	if (!imp) return true;
 	if (imp->isHTMLElement())
 	{
 		String ROACL = ((Element*) imp)->getAttribute("ROACL");
