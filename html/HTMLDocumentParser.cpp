@@ -37,6 +37,8 @@
 #include "HTMLTreeBuilder.h"
 #include "HTMLDocument.h"
 #include "XSSAuditor.h"
+#include "V8IsolatedContext.h"
+#include <sstream>
 #include <wtf/CurrentTime.h>
 
 #if ENABLE(INSPECTOR)
@@ -184,7 +186,18 @@ bool HTMLDocumentParser::runScriptsForPausedTreeBuilder()
     ASSERT(m_treeBuilder->isPaused());
 
     int scriptStartLine = 0;
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
     RefPtr<Element> scriptElement = m_treeBuilder->takeScriptToProcess(scriptStartLine);
+	if (worldID!=0)
+	{
+		std::ostringstream wid;
+		wid << worldID;
+		AtomicString worldstring("worldID");
+		ExceptionCode ec;
+		scriptElement->setAttribute(worldstring,wid.str().c_str(),ec);
+	}
     // We will not have a scriptRunner when parsing a DocumentFragment.
     if (!m_scriptRunner)
         return true;
