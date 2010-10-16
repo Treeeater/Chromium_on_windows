@@ -40,6 +40,7 @@
 #include "HTMLToken.h"
 #include "HTMLTokenizer.h"
 #include "LocalizedStrings.h"
+#include "V8IsolatedContext.h"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -358,6 +359,14 @@ PassRefPtr<Element> HTMLConstructionSite::createHTMLElement(AtomicHTMLToken& tok
     RefPtr<Element> element = HTMLElementFactory::createHTMLElement(tagName, m_document, form(), true);
     element->setAttributeMap(token.takeAtributes(), m_fragmentScriptingPermission);
     ASSERT(element->isHTMLElement());
+	if (V8IsolatedContext::getEntered() != 0)
+	{
+		std::ostringstream wid;
+		int worldID = V8IsolatedContext::getEntered()->getWorldID();
+		wid << worldID;
+		ExceptionCode ec;
+		element->setAttribute("worldID",wid.str().c_str(),ec);
+	}
     return element.release();
 }
 
