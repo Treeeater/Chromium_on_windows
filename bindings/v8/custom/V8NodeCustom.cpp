@@ -162,7 +162,7 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
         if (!wrapper.IsEmpty())
             return wrapper;
     }
-	if (impl->isHTMLElement())
+	if ((worldID!=0)&&(impl->isHTMLElement()))
 	{
 		WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
 		if ((NodeACL!=0)&&(NodeACL!=""))

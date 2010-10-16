@@ -566,6 +566,7 @@ bool RO_check(Node *imp)
 			int worldID = 0;
 			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
 			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+			if ((worldID == 0)||(worldID == -1)) return true;
 			Vector<WTF::String> ACLs;
 			ROACL.split(";",ACLs);
 			for (unsigned int i=0; i<ACLs.size(); i++)
