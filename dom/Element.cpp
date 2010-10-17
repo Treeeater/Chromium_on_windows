@@ -710,8 +710,20 @@ void Element::setAttributeMap(PassRefPtr<NamedNodeMap> list, FragmentScriptingPe
             }
         }
         unsigned len = m_attributeMap->length();
+		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
         for (unsigned i = 0; i < len; i++)
-            attributeChanged(m_attributeMap->m_attributes[i].get());
+		{
+			Attribute* attr = m_attributeMap->m_attributes[i].get();
+			if (isolatedContext!=0)
+			{
+				if (isEventHandlerAttribute(attr->name()))
+				{
+					int worldID = isolatedContext->getWorldID();
+					attr->setWorldID(worldID);
+				}
+			}
+            attributeChanged(attr);
+		}
         // FIXME: What about attributes that were in the old map that are not in the new map?
     }
 }
