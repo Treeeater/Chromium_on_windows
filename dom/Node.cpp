@@ -82,6 +82,8 @@
 #include "WheelEvent.h"
 #include "XMLNames.h"
 #include "htmlediting.h"
+#include "V8Binding.h"
+
 #include <wtf/HashSet.h>
 #include <wtf/PassOwnPtr.h>
 #include <wtf/RefCountedLeakCounter.h>
@@ -2017,6 +2019,7 @@ String Node::textContent(bool convertBRsToNewlines) const
 
 void Node::setTextContent(const String &text, ExceptionCode& ec)
 {           
+	if (!RO_check(this)) return;
     switch (nodeType()) {
         case TEXT_NODE:
         case CDATA_SECTION_NODE:

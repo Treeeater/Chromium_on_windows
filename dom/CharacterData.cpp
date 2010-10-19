@@ -26,11 +26,13 @@
 #include "ExceptionCode.h"
 #include "MutationEvent.h"
 #include "RenderText.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
 void CharacterData::setData(const String& data, ExceptionCode&)
 {
+	if (this->parent()) {if (!RO_check(this->parent())) return;}
     StringImpl* dataImpl = data.impl() ? data.impl() : StringImpl::empty();
     if (equal(m_data.get(), dataImpl))
         return;
@@ -87,12 +89,14 @@ void CharacterData::parserAppendData(const String& data)
 
 void CharacterData::appendData(const String& data, ExceptionCode&)
 {
+	if (this->parent()) {if (!RO_check(this->parent())) return;}
     RefPtr<StringImpl> oldStr = appendDataCommon(data);
     dispatchModifiedEvent(oldStr.get());
 }
 
 void CharacterData::insertData(unsigned offset, const String& data, ExceptionCode& ec)
 {
+	if (this->parent()) {if (!RO_check(this->parent())) return;}
     checkCharDataOperation(offset, ec);
     if (ec)
         return;
@@ -116,6 +120,7 @@ void CharacterData::insertData(unsigned offset, const String& data, ExceptionCod
 
 void CharacterData::deleteData(unsigned offset, unsigned count, ExceptionCode& ec)
 {
+	if (this->parent()) {if (!RO_check(this->parent())) return;}
     checkCharDataOperation(offset, ec);
     if (ec)
         return;
@@ -145,6 +150,7 @@ void CharacterData::deleteData(unsigned offset, unsigned count, ExceptionCode& e
 
 void CharacterData::replaceData(unsigned offset, unsigned count, const String& data, ExceptionCode& ec)
 {
+	if (this->parent()) {if (!RO_check(this->parent())) return;}
     checkCharDataOperation(offset, ec);
     if (ec)
         return;

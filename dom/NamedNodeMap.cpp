@@ -30,6 +30,8 @@
 #include "Element.h"
 #include "ExceptionCode.h"
 #include "HTMLNames.h"
+#include "V8Binding.h"
+#include "V8IsolatedContext.h"
 
 namespace WebCore {
 
@@ -111,9 +113,12 @@ PassRefPtr<Node> NamedNodeMap::setNamedItem(Node* arg, ExceptionCode& ec)
         ec = HIERARCHY_REQUEST_ERR;
         return 0;
     }
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	int worldID = 0;
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
     Attr *attr = static_cast<Attr*>(arg);
-
     Attribute* a = attr->attr();
+	if (worldID != 0) a->setWorldID(worldID);
     Attribute* old = getAttributeItem(a->name());
     if (old == a)
         return RefPtr<Node>(arg); // we know about it already
