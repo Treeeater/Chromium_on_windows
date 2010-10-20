@@ -119,6 +119,7 @@ String Attr::nodeValue() const
 
 void Attr::setValue(const AtomicString& value, ExceptionCode&)
 {
+	if ((this->name() == "roacl")||(this->name() =="acl")||(this->name() == "worldid")) return;
     m_ignoreChildrenChanged++;
     removeChildren();
     m_attribute->setValue(value);

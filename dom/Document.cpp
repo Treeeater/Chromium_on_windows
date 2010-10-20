@@ -3911,6 +3911,8 @@ PassRefPtr<Attr> Document::createAttribute(const String& name, ExceptionCode& ec
 
 PassRefPtr<Attr> Document::createAttributeNS(const String& namespaceURI, const String& qualifiedName, ExceptionCode& ec, bool shouldIgnoreNamespaceChecks)
 {
+	if ((qualifiedName == "roacl")||(qualifiedName =="acl")||(qualifiedName == "worldid")) return 0;
+
     String prefix, localName;
     if (!parseQualifiedName(qualifiedName, prefix, localName, ec))
         return 0;
