@@ -25,6 +25,7 @@
 #include "ExceptionCode.h"
 #include "RenderText.h"
 #include "TextBreakIterator.h"
+#include "V8Binding.h"
 #include <wtf/text/CString.h>
 
 #if ENABLE(SVG)
@@ -49,7 +50,7 @@ PassRefPtr<Text> Text::create(Document* document, const String& data)
 PassRefPtr<Text> Text::splitText(unsigned offset, ExceptionCode& ec)
 {
     ec = 0;
-
+	if (this->parent()) {if (!RO_check(this->parent())) return 0;}
     // INDEX_SIZE_ERR: Raised if the specified offset is negative or greater than
     // the number of 16-bit units in data.
     if (offset > length()) {
@@ -145,7 +146,7 @@ String Text::wholeText() const
 PassRefPtr<Text> Text::replaceWholeText(const String& newText, ExceptionCode&)
 {
     // Remove all adjacent text nodes, and replace the contents of this one.
-
+	if (this->parent()) {if (!RO_check(this->parent())) return 0;}
     // Protect startText and endText against mutation event handlers removing the last ref
     RefPtr<Text> startText = const_cast<Text*>(earliestLogicallyAdjacentTextNode(this));
     RefPtr<Text> endText = const_cast<Text*>(latestLogicallyAdjacentTextNode(this));

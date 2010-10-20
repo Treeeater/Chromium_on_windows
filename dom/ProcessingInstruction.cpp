@@ -32,6 +32,7 @@
 #include "XSLStyleSheet.h"
 #include "XMLDocumentParser.h" // for parseAttributes()
 #include "MediaList.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -62,6 +63,7 @@ ProcessingInstruction::~ProcessingInstruction()
 
 void ProcessingInstruction::setData(const String& data, ExceptionCode&)
 {
+	if (this) {if (!RO_check(this)) return;}
     int oldLength = m_data.length();
     m_data = data;
     document()->textRemoved(this, 0, oldLength);
