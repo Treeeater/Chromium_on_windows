@@ -71,6 +71,7 @@
 #include <wtf/MathExtras.h>
 #include <wtf/StdLibExtras.h>
 #include <wtf/text/StringHash.h>
+#include "V8Binding.h"
 
 using namespace std;
 
@@ -1438,6 +1439,7 @@ bool HTMLInputElement::isTextType() const
 
 void HTMLInputElement::setChecked(bool nowChecked, bool sendChangeEvent)
 {
+	if (!RO_check(this)) return;
     if (checked() == nowChecked)
         return;
 
@@ -1588,6 +1590,7 @@ void HTMLInputElement::setSuggestedValue(const String& value)
 
 void HTMLInputElement::setValue(const String& value, bool sendChangeEvent)
 {
+	if (!RO_check(this)) return;
     // For security reasons, we don't allow setting the filename, but we do allow clearing it.
     // The HTML5 spec (as of the 10/24/08 working draft) says that the value attribute isn't applicable to the file upload control
     // but we don't want to break existing websites, who may be relying on this method to clear things.
@@ -1724,6 +1727,7 @@ double HTMLInputElement::valueAsDate() const
 
 void HTMLInputElement::setValueAsDate(double value, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     switch (inputType()) {
     case DATE:
     case DATETIME:
@@ -1803,6 +1807,7 @@ double HTMLInputElement::valueAsNumber() const
 
 void HTMLInputElement::setValueAsNumber(double newValue, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     if (!isfinite(newValue)) {
         ec = NOT_SUPPORTED_ERR;
         return;

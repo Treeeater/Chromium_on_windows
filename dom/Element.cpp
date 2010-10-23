@@ -167,6 +167,7 @@ PassRefPtr<Element> Element::cloneElementWithoutChildren()
 
 void Element::removeAttribute(const QualifiedName& name, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     if (m_attributeMap) {
         ec = 0;
         m_attributeMap->removeNamedItem(name, ec);

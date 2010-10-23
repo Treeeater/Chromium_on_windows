@@ -36,6 +36,7 @@
 #include "RenderListBox.h"
 #include "RenderMenuList.h"
 #include "ScriptEventListener.h"
+#include "V8Binding.h"
 
 using namespace std;
 
@@ -82,6 +83,7 @@ void HTMLSelectElement::deselectItems(HTMLOptionElement* excludeElement)
 
 void HTMLSelectElement::setSelectedIndex(int optionIndex, bool deselect)
 {
+	if (!RO_check(this)) return;
     SelectElement::setSelectedIndex(m_data, this, optionIndex, deselect, false, false);
 }
 
@@ -129,6 +131,7 @@ unsigned HTMLSelectElement::length() const
 
 void HTMLSelectElement::add(HTMLElement *element, HTMLElement *before, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     RefPtr<HTMLElement> protectNewChild(element); // make sure the element is ref'd and deref'd so we don't leak it
 
     if (!element || !(element->hasLocalName(optionTag) || element->hasLocalName(hrTag)))
@@ -139,6 +142,7 @@ void HTMLSelectElement::add(HTMLElement *element, HTMLElement *before, Exception
 
 void HTMLSelectElement::remove(int index)
 {
+	if (!RO_check(this)) return;
     int listIndex = optionToListIndex(index);
     if (listIndex < 0)
         return;
@@ -161,6 +165,7 @@ String HTMLSelectElement::value()
 
 void HTMLSelectElement::setValue(const String &value)
 {
+	if (!RO_check(this)) return;
     if (value.isNull())
         return;
     // find the option with value() matching the given parameter
@@ -414,6 +419,7 @@ void HTMLSelectElement::setOption(unsigned index, HTMLOptionElement* option, Exc
 
 void HTMLSelectElement::setLength(unsigned newLen, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     ec = 0;
     if (newLen > maxSelectItems)
         newLen = maxSelectItems;

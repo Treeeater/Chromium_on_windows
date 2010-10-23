@@ -33,6 +33,7 @@
 #include "HTMLTableSectionElement.h"
 #include "NodeList.h"
 #include "Text.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -120,6 +121,7 @@ int HTMLTableRowElement::sectionRowIndex() const
 
 PassRefPtr<HTMLElement> HTMLTableRowElement::insertCell(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return 0;
     RefPtr<HTMLCollection> children = cells();
     int numCells = children ? children->length() : 0;
     if (index < -1 || index > numCells) {
@@ -143,6 +145,7 @@ PassRefPtr<HTMLElement> HTMLTableRowElement::insertCell(int index, ExceptionCode
 
 void HTMLTableRowElement::deleteCell(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     RefPtr<HTMLCollection> children = cells();
     int numCells = children ? children->length() : 0;
     if (index == -1)

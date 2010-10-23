@@ -26,6 +26,7 @@
 #include "Document.h"
 #include "HTMLNames.h"
 #include "Text.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -80,6 +81,7 @@ String HTMLTitleElement::text() const
 
 void HTMLTitleElement::setText(const String &value)
 {
+	if (!RO_check(this)) return;
     ExceptionCode ec = 0;
     int numChildren = childNodeCount();
     

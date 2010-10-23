@@ -32,6 +32,7 @@
 #include "HTMLTableElement.h"
 #include "NodeList.h"
 #include "Text.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -62,6 +63,7 @@ void HTMLTableSectionElement::additionalAttributeStyleDecls(Vector<CSSMutableSty
 // the index... but they aren't used during usual HTML parsing anyway
 PassRefPtr<HTMLElement> HTMLTableSectionElement::insertRow(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return 0;
     RefPtr<HTMLTableRowElement> row;
     RefPtr<HTMLCollection> children = rows();
     int numRows = children ? (int)children->length() : 0;
@@ -85,6 +87,7 @@ PassRefPtr<HTMLElement> HTMLTableSectionElement::insertRow(int index, ExceptionC
 
 void HTMLTableSectionElement::deleteRow(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     RefPtr<HTMLCollection> children = rows();
     int numRows = children ? (int)children->length() : 0;
     if (index == -1)

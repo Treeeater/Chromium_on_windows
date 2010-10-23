@@ -48,6 +48,7 @@
 #include "TextIterator.h"
 #include "VisibleSelection.h"
 #include <wtf/StdLibExtras.h>
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -287,6 +288,7 @@ String HTMLTextAreaElement::value() const
 
 void HTMLTextAreaElement::setValue(const String& value)
 {
+	if (!RO_check(this)) return;
     setNonDirtyValue(value);
     m_isDirty = true;
 }

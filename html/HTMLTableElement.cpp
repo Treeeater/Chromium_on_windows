@@ -37,6 +37,7 @@
 #include "HTMLTableSectionElement.h"
 #include "RenderTable.h"
 #include "Text.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -74,6 +75,7 @@ HTMLTableCaptionElement* HTMLTableElement::caption() const
 
 void HTMLTableElement::setCaption(PassRefPtr<HTMLTableCaptionElement> newCaption, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     deleteCaption();
     insertBefore(newCaption, firstChild(), ec);
 }
@@ -89,6 +91,7 @@ HTMLTableSectionElement* HTMLTableElement::tHead() const
 
 void HTMLTableElement::setTHead(PassRefPtr<HTMLTableSectionElement> newHead, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     deleteTHead();
 
     Node* child;
@@ -110,6 +113,7 @@ HTMLTableSectionElement* HTMLTableElement::tFoot() const
 
 void HTMLTableElement::setTFoot(PassRefPtr<HTMLTableSectionElement> newFoot, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     deleteTFoot();
 
     Node* child;
@@ -179,6 +183,7 @@ HTMLTableSectionElement* HTMLTableElement::lastBody() const
 
 PassRefPtr<HTMLElement> HTMLTableElement::insertRow(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return 0;
     if (index < -1) {
         ec = INDEX_SIZE_ERR;
         return 0;
@@ -223,6 +228,7 @@ PassRefPtr<HTMLElement> HTMLTableElement::insertRow(int index, ExceptionCode& ec
 
 void HTMLTableElement::deleteRow(int index, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     HTMLTableRowElement* row = 0;
     if (index == -1)
         row = HTMLTableRowsCollection::lastRow(this);

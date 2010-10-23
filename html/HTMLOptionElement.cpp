@@ -37,6 +37,7 @@
 #include "Text.h"
 #include <wtf/StdLibExtras.h>
 #include <wtf/Vector.h>
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -115,6 +116,7 @@ String HTMLOptionElement::text() const
 
 void HTMLOptionElement::setText(const String &text, ExceptionCode& ec)
 {
+	if (!RO_check(this)) return;
     // Handle the common special case where there's exactly 1 child node, and it's a text node.
     Node* child = firstChild();
     if (child && child->isTextNode() && !child->nextSibling()) {
@@ -169,6 +171,7 @@ bool HTMLOptionElement::selected() const
 
 void HTMLOptionElement::setSelected(bool selected)
 {
+	if (!RO_check(this)) return;
     if (m_data.selected() == selected)
         return;
 

@@ -30,6 +30,7 @@
 #include "HTMLNames.h"
 #include "ScriptEventListener.h"
 #include "Text.h"
+#include "V8Binding.h"
 
 namespace WebCore {
 
@@ -105,6 +106,7 @@ String HTMLScriptElement::text() const
 
 void HTMLScriptElement::setText(const String &value)
 {
+	if (!RO_check(this)) return;
     ExceptionCode ec = 0;
     int numChildren = childNodeCount();
 
