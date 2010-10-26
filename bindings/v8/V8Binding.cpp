@@ -560,27 +560,29 @@ bool RO_check(Node *imp)
 	if (!imp) return true;
 	if (imp->isHTMLElement())
 	{
+		int worldID = 0;
+		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+		if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
 		String ROACL = ((Element*) imp)->getAttribute("ROACL");
-		if ((ROACL != NULL)&&(ROACL != ""))
+		if (worldID != 0)
 		{
-			int worldID = 0;
-			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
-			if ((worldID == 0)||(worldID == -1)) return true;
-			Vector<WTF::String> ACLs;
-			ROACL.split(";",ACLs);
-			for (unsigned int i=0; i<ACLs.size(); i++)
+			if ((ROACL != NULL)&&(ROACL != ""))
 			{
-				if (worldID==ACLs[i].toInt())
+				Vector<WTF::String> ACLs;
+				ROACL.split(";",ACLs);
+				for (unsigned int i=0; i<ACLs.size(); i++)
 				{
-					ACLs.clear();
-					return true;
+					if (worldID==ACLs[i].toInt())
+					{
+						ACLs.clear();
+						return true;
+					}
 				}
+				ACLs.clear();
+				return false;
 			}
-			ACLs.clear();
-			return false;
+			else return false;
 		}
-		return true;
 	}
 	return true;
 }

@@ -82,6 +82,7 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 			}
 			if (flag == true) return v8::Null();
 		}
+		else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
 	}
 
     if (impl->isHTMLElement())
