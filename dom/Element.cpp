@@ -536,14 +536,14 @@ const AtomicString& Element::getAttributeNS(const String& namespaceURI, const St
     return getAttribute(QualifiedName(nullAtom, localName, namespaceURI));
 }
 
-void Element::setAttribute(const AtomicString& name, const AtomicString& value, ExceptionCode& ec, int worldID)
+void Element::setAttribute(const AtomicString& name, const AtomicString& value, ExceptionCode& ec, int worldID, bool fromJSC)
 {
     if (!Document::isValidName(name)) {
         ec = INVALID_CHARACTER_ERR;
         return;
     }
 
-	if (!RO_check(this)) return;
+	if ((!RO_check(this))&&fromJSC) return;
 
     const AtomicString& localName = shouldIgnoreAttributeCase(this) ? name.lower() : name;
 

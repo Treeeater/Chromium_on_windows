@@ -364,8 +364,16 @@ PassRefPtr<Element> HTMLConstructionSite::createHTMLElement(AtomicHTMLToken& tok
 		std::ostringstream wid;
 		int worldID = V8IsolatedContext::getEntered()->getWorldID();
 		wid << worldID;
+		std::string aclid = wid.str()+";";
+		std::string aclname = "ACL";
+		std::string ROACLname = "ROACL";
 		ExceptionCode ec;
-		element->setAttribute("worldID",wid.str().c_str(),ec);
+		if (worldID!=0)
+		{
+			element->setAttribute("worldID",wid.str().c_str(),ec,worldID,false);
+			element->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+			element->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+		}
 	}
     return element.release();
 }

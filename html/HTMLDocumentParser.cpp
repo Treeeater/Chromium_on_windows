@@ -196,7 +196,7 @@ bool HTMLDocumentParser::runScriptsForPausedTreeBuilder()
 		wid << worldID;
 		AtomicString worldstring("worldID");
 		ExceptionCode ec;
-		scriptElement->setAttribute(worldstring,wid.str().c_str(),ec);
+		scriptElement->setAttribute(worldstring,wid.str().c_str(),ec,worldID,false);
 	}
     // We will not have a scriptRunner when parsing a DocumentFragment.
     if (!m_scriptRunner)

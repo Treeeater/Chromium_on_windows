@@ -72,6 +72,15 @@ v8::Handle<v8::Value> V8Node::insertBeforeCallback(const v8::Arguments& args)
     ExceptionCode ec = 0;
     Node* newChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
     Node* refChild = V8Node::HasInstance(args[1]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[1])) : 0;
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	std::ostringstream wid;
+	wid << worldID;
+	if ((newChild->isHTMLElement())&&(worldID!=0))
+	{
+		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
+	}
     bool success = imp->insertBefore(newChild, refChild, ec, true);
     if (ec) {
         V8Proxy::setDOMException(ec);
@@ -92,6 +101,15 @@ v8::Handle<v8::Value> V8Node::replaceChildCallback(const v8::Arguments& args)
     ExceptionCode ec = 0;
     Node* newChild = V8Node::HasInstance(args[0]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[0])) : 0;
     Node* oldChild = V8Node::HasInstance(args[1]) ? V8Node::toNative(v8::Handle<v8::Object>::Cast(args[1])) : 0;
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	std::ostringstream wid;
+	wid << worldID;
+	if ((newChild->isHTMLElement())&&(worldID!=0))
+	{
+		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
+	}
     bool success = imp->replaceChild(newChild, oldChild, ec, true);
     if (ec) {
         V8Proxy::setDOMException(ec);
@@ -134,11 +152,11 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
 	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
 	std::ostringstream wid;
 	wid << worldID;
-	if (newChild->isHTMLElement())
+	if ((newChild->isHTMLElement())&&(worldID!=0))
 	{
 		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
 	}
-    bool success = imp->appendChild(newChild, ec, true );
+    bool success = imp->appendChild(newChild, ec, true);
     if (ec) {
         V8Proxy::setDOMException(ec);
         return v8::Handle<v8::Value>();
