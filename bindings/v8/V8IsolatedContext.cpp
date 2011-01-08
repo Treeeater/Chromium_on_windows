@@ -63,7 +63,11 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     v8::Context::Scope contextScope(m_context->get());
 
     getGlobalObject(m_context->get())->SetPointerInInternalField(V8DOMWindow::enteredIsolatedWorldIndex, this);
-
+	if (WID == 10)
+	{
+		v8::Handle<v8::String> fuckeraa(v8::String::New("this is a test")); 
+		getGlobalObject(m_context->get())->Set(v8::String::New("fuckeraa"), fuckeraa); 
+	}
     V8DOMWindowShell::installHiddenObjectPrototype(m_context->get());
     // FIXME: This will go away once we have a windowShell for the isolated world.
     proxy->windowShell()->installDOMWindow(m_context->get(), proxy->frame()->domWindow());
