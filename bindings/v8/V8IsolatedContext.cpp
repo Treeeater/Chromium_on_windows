@@ -59,14 +59,20 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     if (m_context->get().IsEmpty())
         return;
 
-	if (WID == 100)
+	if (WID != 10)
 	{
-		//v8::Local<v8::Value> foo2 = v8::String::New("foo");
-		//m_context->get()->SetSecurityToken(foo2);
-		v8::Handle<v8::Object> shared_lib_con = proxy->getIWMap().get(10)->context()->Global();	//for example, 10 is the shared library
-		getGlobalObject(m_context->get())->Set(v8::String::New("othercontext"), shared_lib_con);
+		if (proxy->getIWMap().contains(10))
+		{
+			v8::Handle<v8::Object> shared_lib_con = proxy->getIWMap().get(10)->context()->Global();	//for example, 10 is the shared library
+			getGlobalObject(m_context->get())->Set(v8::String::New("othercontext"), shared_lib_con);
+		}
 	}
-	if (WID == 50)
+	else
+	{
+		v8::Local<v8::Value> foo = v8::String::New("foo");
+		m_context->get()->SetSecurityToken(foo);
+	}
+	/*if (WID == 50)
 	{
 		//v8::Local<v8::Value> foo3 = v8::String::New("foo2");
 		//m_context->get()->SetSecurityToken(foo3);
@@ -79,7 +85,7 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
 		//m_context->get()->SetSecurityToken(foo);
 		v8::Handle<v8::String> testvar(v8::String::New("this is a test")); 
 		getGlobalObject(m_context->get())->Set(v8::String::New("testvar"), testvar);
-	}
+	}*/
     // Run code in the new context.
     v8::Context::Scope contextScope(m_context->get());
 
@@ -97,6 +103,14 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     m_context->get()->UseDefaultSecurityToken();
 
     proxy->frame()->loader()->client()->didCreateIsolatedScriptContext();
+
+	if ((WID == 10)&&(!proxy->mainWorldContext().IsEmpty()))
+	{
+		v8::Local<v8::Value> foo = v8::String::New("foo");
+		proxy->mainWorldContext()->SetSecurityToken(foo);
+		v8::Handle<v8::Object> shared_lib_con = m_context->get()->Global();
+		proxy->mainWorldContext()->Global()->Set(v8::String::New("othercontext"), shared_lib_con);
+	}
 }
 
 void V8IsolatedContext::destroy()
