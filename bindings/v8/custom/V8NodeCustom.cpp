@@ -192,11 +192,11 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 			{
 				if (worldID==ACLs[i].toInt())
 				{
+					flag = true;
 					break;
 				}
-				flag = true;
 			}
-			if (flag == true) return v8::Null();
+			if (flag == false) return v8::Null();
 		}
 		else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
 	}

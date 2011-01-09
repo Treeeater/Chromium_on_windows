@@ -244,12 +244,24 @@ ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, Shoul
 		if (m_proxy->getIWMap().contains(targetworldID))
 		{
 			V8IsolatedContext* isolatedContext = m_proxy->getIWMap().get(targetworldID);
-			v8Context = v8::Local<v8::Context>::New(isolatedContext->context());
+			v8Context = isolatedContext->context();
 		}
 		else
 		{
 			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID);
-			v8Context = v8::Local<v8::Context>::New(isolatedContext->context());
+			v8Context = isolatedContext->context();
+			/*
+			if (targetworldID == 100)
+			{
+				v8::Handle<v8::Context> shared_lib_con = m_proxy->getIWMap().get(10)->context();	//for example, 10 is the shared library
+				//v8::Handle<v8::String> token1 = v8Context->GetSecurityToken()->ToString();
+				//v8::Handle<v8::String> token2 = shared_lib_con->GetSecurityToken()->ToString();
+				if (v8Context->GetSecurityToken()->Equals(shared_lib_con->GetSecurityToken()))
+				{
+					v8::Local<v8::Value> spy = shared_lib_con->Global()->Get(v8::String::New("spy"));
+					v8::Local<v8::Value> result = v8::Function::Cast(*spy)->Call(v8Context->Global(), 0, NULL);
+				}
+			}*/
 			m_proxy->addWorldToMap(targetworldID,isolatedContext);
 		}
 	}
