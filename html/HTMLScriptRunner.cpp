@@ -167,8 +167,10 @@ void HTMLScriptRunner::executeScript(Element* element, const ScriptSourceCode& s
     if (!m_document->frame())
         return;
 	String shouldExecuteInIsolatedWorld = element->getAttribute("worldID");
+	String sharedLibraryId = element->getAttribute("SharedLibId");
 	if (!shouldExecuteInIsolatedWorld) shouldExecuteInIsolatedWorld="";
-	m_document->frame()->script()->executeScript(sourceCode, (ShouldAllowXSS) false, shouldExecuteInIsolatedWorld);
+	if (!sharedLibraryId) sharedLibraryId="";
+	m_document->frame()->script()->executeScript(sourceCode, (ShouldAllowXSS) false, shouldExecuteInIsolatedWorld, sharedLibraryId);
 }
 
 void HTMLScriptRunner::watchForLoad(PendingScript& pendingScript)

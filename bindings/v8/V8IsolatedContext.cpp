@@ -49,7 +49,7 @@ void V8IsolatedContext::contextWeakReferenceCallback(v8::Persistent<v8::Value> o
     delete context;
 }
 
-V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID)
+V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID, String SharedLibId)
     : m_world(IsolatedWorld::create())
 {
 	m_worldID = WID;
@@ -58,7 +58,8 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     m_context = SharedPersistent<v8::Context>::create(proxy->windowShell()->createNewContext(v8::Handle<v8::Object>(), extensionGroup));
     if (m_context->get().IsEmpty())
         return;
-
+	//Currently the shared library only shares with the main execution world.
+	/*
 	if (WID != 10)
 	{
 		if (proxy->getIWMap().contains(10))
@@ -72,20 +73,7 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
 		v8::Local<v8::Value> foo = v8::String::New("foo");
 		m_context->get()->SetSecurityToken(foo);
 	}
-	/*if (WID == 50)
-	{
-		//v8::Local<v8::Value> foo3 = v8::String::New("foo2");
-		//m_context->get()->SetSecurityToken(foo3);
-		v8::Handle<v8::Object> shared_lib_con = proxy->getIWMap().get(10)->context()->Global();	//for example, 10 is the shared library
-		getGlobalObject(m_context->get())->Set(v8::String::New("othercontext2"), shared_lib_con);
-	}
-	if (WID == 10)
-	{
-		//v8::Local<v8::Value> foo = v8::String::New("foo");
-		//m_context->get()->SetSecurityToken(foo);
-		v8::Handle<v8::String> testvar(v8::String::New("this is a test")); 
-		getGlobalObject(m_context->get())->Set(v8::String::New("testvar"), testvar);
-	}*/
+	*/
     // Run code in the new context.
     v8::Context::Scope contextScope(m_context->get());
 
@@ -103,13 +91,13 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     m_context->get()->UseDefaultSecurityToken();
 
     proxy->frame()->loader()->client()->didCreateIsolatedScriptContext();
-
-	if ((WID == 10)&&(!proxy->mainWorldContext().IsEmpty()))
+	//Share the shared lib with main world
+	if ((SharedLibId!="")&&(!proxy->mainWorldContext().IsEmpty()))
 	{
 		v8::Local<v8::Value> foo = v8::String::New("foo");
 		proxy->mainWorldContext()->SetSecurityToken(foo);
-		v8::Handle<v8::Object> shared_lib_con = m_context->get()->Global();
-		proxy->mainWorldContext()->Global()->Set(v8::String::New("othercontext"), shared_lib_con);
+		v8::Handle<v8::Object> shared_lib_obj = m_context->get()->Global();
+		proxy->mainWorldContext()->Global()->Set(v8::String::New(SharedLibId.utf8().data()), shared_lib_obj);
 	}
 }
 

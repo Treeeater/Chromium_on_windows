@@ -222,7 +222,7 @@ void ScriptController::evaluateInIsolatedWorld(unsigned worldID, const Vector<Sc
 }
 
 // Evaluate a script file in the environment of this proxy.
-ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld)
+ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld, String SharedLibId)
 {
     String sourceURL = sourceCode.url();
     const String* savedSourceURL = m_sourceURL;
@@ -248,7 +248,7 @@ ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, Shoul
 		}
 		else
 		{
-			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID);
+			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID, SharedLibId);
 			v8Context = isolatedContext->context();
 			/*
 			if (targetworldID == 100)
