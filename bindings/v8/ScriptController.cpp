@@ -222,7 +222,7 @@ void ScriptController::evaluateInIsolatedWorld(unsigned worldID, const Vector<Sc
 }
 
 // Evaluate a script file in the environment of this proxy.
-ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld, String SharedLibId)
+ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld, String SharedLibId, String UseLibId)
 {
     String sourceURL = sourceCode.url();
     const String* savedSourceURL = m_sourceURL;
@@ -248,20 +248,8 @@ ScriptValue ScriptController::evaluate(const ScriptSourceCode& sourceCode, Shoul
 		}
 		else
 		{
-			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID, SharedLibId);
+			V8IsolatedContext* isolatedContext = new V8IsolatedContext(m_proxy.get(), 1, targetworldID, SharedLibId, UseLibId);
 			v8Context = isolatedContext->context();
-			/*
-			if (targetworldID == 100)
-			{
-				v8::Handle<v8::Context> shared_lib_con = m_proxy->getIWMap().get(10)->context();	//for example, 10 is the shared library
-				//v8::Handle<v8::String> token1 = v8Context->GetSecurityToken()->ToString();
-				//v8::Handle<v8::String> token2 = shared_lib_con->GetSecurityToken()->ToString();
-				if (v8Context->GetSecurityToken()->Equals(shared_lib_con->GetSecurityToken()))
-				{
-					v8::Local<v8::Value> spy = shared_lib_con->Global()->Get(v8::String::New("spy"));
-					v8::Local<v8::Value> result = v8::Function::Cast(*spy)->Call(v8Context->Global(), 0, NULL);
-				}
-			}*/
 			m_proxy->addWorldToMap(targetworldID,isolatedContext);
 		}
 	}

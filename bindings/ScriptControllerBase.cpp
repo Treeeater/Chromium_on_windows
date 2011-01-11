@@ -44,12 +44,12 @@ bool ScriptController::canExecuteScripts(ReasonForCallingCanExecuteScripts reaso
     return allowed;
 }
 
-ScriptValue ScriptController::executeScript(const String& script, bool forceUserGesture, ShouldAllowXSS shouldAllowXSS, String worldID, String SharedLibId)
+ScriptValue ScriptController::executeScript(const String& script, bool forceUserGesture, ShouldAllowXSS shouldAllowXSS, String worldID, String SharedLibId, String UseLibId)
 {
-    return executeScript(ScriptSourceCode(script, forceUserGesture ? KURL() : m_frame->loader()->url()), shouldAllowXSS, worldID, SharedLibId);
+    return executeScript(ScriptSourceCode(script, forceUserGesture ? KURL() : m_frame->loader()->url()), shouldAllowXSS, worldID, SharedLibId, UseLibId);
 }
 
-ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld, String SharedLibId)
+ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, ShouldAllowXSS shouldAllowXSS, String shouldExecuteInIsolatedWorld, String SharedLibId, String UseLibId)
 {
 	ScriptValue result;
     if (!canExecuteScripts(AboutToExecuteScript) || isPaused())
@@ -58,7 +58,7 @@ ScriptValue ScriptController::executeScript(const ScriptSourceCode& sourceCode, 
     bool wasInExecuteScript = m_inExecuteScript;
     m_inExecuteScript = true;
 
-	result = evaluate(sourceCode, shouldAllowXSS, shouldExecuteInIsolatedWorld, SharedLibId);
+	result = evaluate(sourceCode, shouldAllowXSS, shouldExecuteInIsolatedWorld, SharedLibId, UseLibId);
 
     if (!wasInExecuteScript) {
         m_inExecuteScript = false;

@@ -65,8 +65,8 @@ public:
     // or this accessor should be made JSProxy*
     V8Proxy* proxy() { return m_proxy.get(); }
 
-    ScriptValue executeScript(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld = "", String SharedLibId = "");
-    ScriptValue executeScript(const String& script, bool forceUserGesture = false, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String worldID="", String SharedLibId = "");
+    ScriptValue executeScript(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld = "", String SharedLibId = "", String UseLibId = "");
+    ScriptValue executeScript(const String& script, bool forceUserGesture = false, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String worldID="", String SharedLibId = "", String UseLibId = "");
 
     // Returns true if argument is a JavaScript URL.
     bool executeIfJavaScriptURL(const KURL&, bool userGesture = false, ShouldReplaceDocumentIfJavaScriptURL shouldReplaceDocumentIfJavaScriptURL = ReplaceDocumentIfJavaScriptURL, String worldID="");
@@ -77,7 +77,7 @@ public:
     // Evaluate a script file in the environment of this proxy.
     // If succeeded, 'succ' is set to true and result is returned
     // as a string.
-    ScriptValue evaluate(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld="", String SharedLibId = "");
+    ScriptValue evaluate(const ScriptSourceCode&, ShouldAllowXSS shouldAllowXSS = DoNotAllowXSS, String shouldExecuteInIsolatedWorld="", String SharedLibId = "", String UseLibId = "");
 
     void evaluateInIsolatedWorld(unsigned worldID, const Vector<ScriptSourceCode>&);
 

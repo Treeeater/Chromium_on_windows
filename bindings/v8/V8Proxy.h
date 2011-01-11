@@ -340,7 +340,11 @@ namespace WebCore {
 		//zyc
 		HashMap<int, V8IsolatedContext*> getIWMap() { return m_isolatedWorlds; }
 
+		HashMap<WTF::String, int> getLibMap() { return m_libmap; }
+
 		void addWorldToMap(int targetID, V8IsolatedContext* context) { m_isolatedWorlds.add(targetID, context); }
+
+		void addLibToMap(WTF::String LibId, int worldId) { m_libmap.add(LibId, worldId); }
 
 //		HashMap<V8IsolatedContext*, int> getRMap() { return m_reverseMap; }
 
@@ -406,6 +410,8 @@ namespace WebCore {
         //        IsolatedContext directly.
         typedef HashMap<int, V8IsolatedContext*> IsolatedWorldMap;
         IsolatedWorldMap m_isolatedWorlds;
+		typedef HashMap<WTF::String, int> LibMap;
+		LibMap m_libmap;
     };
 
     template <typename T>
