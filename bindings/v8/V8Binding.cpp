@@ -555,14 +555,21 @@ v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo& info,
     return v8ExternalString(imp->getAttribute(name));
 }
 
-bool RO_check(Node *imp)
+bool RO_check(Node *imp)					//Checking if the node is read only to that script
 {
 	if (!imp) return true;
 	if (imp->isHTMLElement())
 	{
 		int worldID = 0;
 		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-		if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+		if (isolatedContext!=0) 
+		{
+			if (isolatedContext->is_SharedLib())
+			{
+				return true;
+			}
+			worldID = isolatedContext->getWorldID();
+		}
 		String ROACL = ((Element*) imp)->getAttribute("ROACL");
 		if (worldID != 0)
 		{

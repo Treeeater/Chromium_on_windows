@@ -53,6 +53,8 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     : m_world(IsolatedWorld::create())
 {
 	m_worldID = WID;
+	m_sharedLibId = "";
+	isSharedLib = false;
     v8::HandleScope scope;
     // FIXME: We should be creating a new V8DOMWindowShell here instead of riping out the context.
     m_context = SharedPersistent<v8::Context>::create(proxy->windowShell()->createNewContext(v8::Handle<v8::Object>(), extensionGroup));
@@ -100,6 +102,8 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
 		v8::Handle<v8::Object> shared_lib_obj = m_context->get()->Global();
 		proxy->mainWorldContext()->Global()->Set(v8::String::New(SharedLibId.utf8().data()), shared_lib_obj);
 		proxy->addLibToMap(SharedLibId,WID);
+		m_sharedLibId = SharedLibId;
+		isSharedLib = true;
 	}
 }
 

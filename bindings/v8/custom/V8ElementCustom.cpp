@@ -59,30 +59,36 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 {
 	int worldID = 0;
 	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
 
     if (!impl)
         return v8::Null();
 
-	if ((worldID!=0)&&(impl->isHTMLElement()))
+	if (isolatedContext!=0) 
 	{
-		WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
-		if ((NodeACL!=0)&&(NodeACL!=""))
+		if (!isolatedContext->is_SharedLib())
 		{
-			bool flag = false;
-			Vector<WTF::String> ACLs;
-			NodeACL.split(";",ACLs);
-			for (unsigned int i=0; i<ACLs.size(); i++)
+			worldID = isolatedContext->getWorldID();
+			if ((worldID!=0)&&(impl->isHTMLElement()))
 			{
-				if (worldID==ACLs[i].toInt())
+				WTF::String NodeACL = ((Element*)impl)->getAttribute("ACL");
+				if ((NodeACL!=0)&&(NodeACL!=""))
 				{
-					flag = true;
-					break;
+					bool flag = false;
+					Vector<WTF::String> ACLs;
+					NodeACL.split(";",ACLs);
+					for (unsigned int i=0; i<ACLs.size(); i++)
+					{
+						if (worldID==ACLs[i].toInt())
+						{
+							flag = true;
+							break;
+						}
+					}
+					if (flag == false) return v8::Null();
 				}
+				else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
 			}
-			if (flag == false) return v8::Null();
 		}
-		else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
 	}
 
     if (impl->isHTMLElement())

@@ -95,6 +95,8 @@ public:
     IsolatedWorld* world() const { return m_world.get(); }
 	int getWorldID() { return m_worldID; }
 	void setWorldID(int WID) { m_worldID = WID; }
+	String getSharedLibId() {return m_sharedLibId;}
+	bool is_SharedLib() {return isSharedLib;}
 private:
     static v8::Handle<v8::Object> getGlobalObject(v8::Handle<v8::Context> context)
     {
@@ -111,6 +113,8 @@ private:
 
     RefPtr<IsolatedWorld> m_world;
 	int m_worldID;
+	String m_sharedLibId;
+	bool isSharedLib;
 };
 
 } // namespace WebCore
