@@ -169,10 +169,54 @@ void HTMLScriptRunner::executeScript(Element* element, const ScriptSourceCode& s
 	String shouldExecuteInIsolatedWorld = element->getAttribute("worldID");
 	String sharedLibraryId = element->getAttribute("SharedLibId");
 	String UseLibId = element->getAttribute("UseLibId");
+	bool writable = true;
+	if (((Node *)element)->parentElement())
+	{
+		String ACL=((Node *)element)->parentElement()->getAttribute("ACL");
+		String ROACL=((Node *)element)->parentElement()->getAttribute("ROACL");
+		int worldID = shouldExecuteInIsolatedWorld.toInt();
+		bool flag = false;
+		bool flag2 = false;
+		if (worldID != 0)
+		{
+			if ((ROACL != NULL)&&(ROACL != ""))
+			{
+				Vector<WTF::String> ACLs;
+				ROACL.split(";",ACLs);
+				for (unsigned int i=0; i<ACLs.size(); i++)
+				{
+					if (worldID==ACLs[i].toInt())
+					{
+						ACLs.clear();
+						flag = true;
+					}
+				}
+				ACLs.clear();
+			}
+			if (flag == true)
+			{
+				if ((ACL != NULL)&&(ACL != ""))
+				{
+					Vector<WTF::String> ACLs;
+					ACL.split(";",ACLs);
+					for (unsigned int i=0; i<ACLs.size(); i++)
+					{
+						if (worldID==ACLs[i].toInt())
+						{
+							ACLs.clear();
+							flag2 = true;
+						}
+					}
+					ACLs.clear();
+				}
+			}
+			writable = flag && flag2;
+		}
+	}
 	if (!shouldExecuteInIsolatedWorld) shouldExecuteInIsolatedWorld="";
 	if (!sharedLibraryId) sharedLibraryId="";
 	if (!UseLibId) UseLibId="";
-	m_document->frame()->script()->executeScript(sourceCode, (ShouldAllowXSS) false, shouldExecuteInIsolatedWorld, sharedLibraryId, UseLibId);
+	m_document->frame()->script()->executeScript(sourceCode, (ShouldAllowXSS) false, shouldExecuteInIsolatedWorld, sharedLibraryId, UseLibId, writable);
 }
 
 void HTMLScriptRunner::watchForLoad(PendingScript& pendingScript)

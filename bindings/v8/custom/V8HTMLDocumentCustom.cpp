@@ -116,6 +116,11 @@ v8::Handle<v8::Value> V8HTMLDocument::writeCallback(const v8::Arguments& args)
     Frame* frame = V8Proxy::retrieveFrameForCallingContext();
 	WTF::String ACLname = "writeACL";
 	if (!security_check(htmlDocument,ACLname)) return v8::Undefined();
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0)
+	{
+		if (!isolatedContext->isWritable()) return v8::Undefined();
+	}
     htmlDocument->write(writeHelperGetString(args), frame ? frame->document() : NULL);
     return v8::Undefined();
 }
@@ -127,6 +132,11 @@ v8::Handle<v8::Value> V8HTMLDocument::writelnCallback(const v8::Arguments& args)
     Frame* frame = V8Proxy::retrieveFrameForCallingContext();
 	WTF::String ACLname = "writeACL";										//currently the writeln has the same privilege with write
 	if (!security_check(htmlDocument,ACLname)) return v8::Undefined();
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0)
+	{
+		if (!isolatedContext->isWritable()) return v8::Undefined();
+	}
     htmlDocument->writeln(writeHelperGetString(args), frame ? frame->document() : NULL);
     return v8::Undefined();
 }

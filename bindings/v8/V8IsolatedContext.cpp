@@ -105,6 +105,7 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
 		m_sharedLibId = SharedLibId;
 		isSharedLib = true;
 	}
+	m_writable = true;
 }
 
 void V8IsolatedContext::destroy()

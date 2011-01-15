@@ -95,6 +95,8 @@ public:
     IsolatedWorld* world() const { return m_world.get(); }
 	int getWorldID() { return m_worldID; }
 	void setWorldID(int WID) { m_worldID = WID; }
+	bool isWritable() { return m_writable; }
+	void setWritable(bool writ) { m_writable = writ; }
 	String getSharedLibId() {return m_sharedLibId;}
 	bool is_SharedLib() {return isSharedLib;}
 private:
@@ -115,6 +117,7 @@ private:
 	int m_worldID;
 	String m_sharedLibId;
 	bool isSharedLib;
+	bool m_writable;
 };
 
 } // namespace WebCore
