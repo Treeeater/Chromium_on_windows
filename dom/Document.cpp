@@ -137,6 +137,8 @@
 #include "XMLNSNames.h"
 #include "XMLNames.h"
 #include "htmlediting.h"
+#include "V8IsolatedContext.h"
+#include <sstream>
 #include <wtf/CurrentTime.h>
 #include <wtf/HashFunctions.h>
 #include <wtf/MainThread.h>
@@ -2127,9 +2129,69 @@ void Document::write(const SegmentedString& text, Document* ownerDocument)
 #endif    
 }
 
+bool transform(String& text, String str2write, int& scriptlevel, int& currentpointer)
+{
+	if ((currentpointer<0)||(currentpointer>=text.length())) return true;		//ASSERT
+	int temp=0;
+	bool script = false;
+	if (scriptlevel == 0)
+	{
+		currentpointer = text.find('<',currentpointer);
+		temp = text.find("</",currentpointer);
+		if (currentpointer == -1) return true;		//done
+		if (temp==currentpointer)					//this is a closing tag, ignore.
+		{
+			currentpointer++;
+			return false;
+		}
+		else		//we found one starting tag 
+		{
+			if (text.substring(currentpointer).startsWith("script",false)) 
+			{
+				scriptlevel++;		//Is this a script tag?
+				script = true;
+			}
+			currentpointer = text.find('>',currentpointer);			//find the end of the tag
+			if (text[currentpointer-1]=='/') 
+			{
+				currentpointer--;		//deal w/ self closing tag
+				if (script == true) scriptlevel--;
+			}
+		}
+		//now we found the place to insert our str2write
+		text.insert(str2write,currentpointer);
+		currentpointer+=str2write.length();
+		return false;		//assuming not done yet
+	}
+	else if (scriptlevel > 0)		//we are in a script tag, don't do anything until we found the exit.
+	{
+		currentpointer = text.find("</script>",currentpointer);
+		if (currentpointer == -1) return true;		//error done
+		else
+		{
+			scriptlevel--;
+			return false;							//assuming not done yet
+		}
+	}
+	return true;		//error done
+}
+
 void Document::write(const String& text, Document* ownerDocument)
 {
-    write(SegmentedString(text), ownerDocument);
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	String text2(text);
+	if (worldID!=0)
+	{
+		std::ostringstream wid;
+		wid << worldID;
+		std::string temp2write = " worldID = \"" + wid.str() + "\" ACL = \"" + wid.str() + ";\" ROACL = \""+ wid.str() +";\"";
+		String str2write(temp2write.c_str());
+		int scriptlevel = 0, currentpointer = 0;
+		while (!transform(text2, str2write, scriptlevel, currentpointer)){}
+	}
+    write(SegmentedString(text2), ownerDocument);
 }
 
 void Document::writeln(const String& text, Document* ownerDocument)

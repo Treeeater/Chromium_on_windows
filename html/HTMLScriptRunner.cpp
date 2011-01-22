@@ -38,6 +38,10 @@
 #include "NotImplemented.h"
 #include "ScriptElement.h"
 #include "ScriptSourceCode.h"
+#include <iostream>
+#include <sstream>
+#include <string>
+#include "V8IsolatedContext.h"
 
 namespace WebCore {
 
@@ -148,7 +152,8 @@ void HTMLScriptRunner::executePendingScriptAndDispatchEvent(PendingScript& pendi
         NestingLevelIncrementer nestingLevelIncrementer(m_scriptNestingLevel);
         if (errorOccurred)
             scriptElement->dispatchEvent(createScriptErrorEvent());
-        else {
+        else 
+		{
             executeScript(scriptElement.get(), sourceCode);
             scriptElement->dispatchEvent(createScriptLoadEvent());
         }
@@ -305,6 +310,22 @@ void HTMLScriptRunner::requestParsingBlockingScript(Element* element)
 bool HTMLScriptRunner::requestPendingScript(PendingScript& pendingScript, Element* script) const
 {
     ASSERT(!pendingScript.element());
+	if (V8IsolatedContext::getEntered() != 0)
+	{
+		std::ostringstream wid;
+		int worldID = V8IsolatedContext::getEntered()->getWorldID();
+		wid << worldID;
+		std::string aclid = wid.str()+";";
+		std::string aclname = "ACL";
+		std::string ROACLname = "ROACL";
+		ExceptionCode ec;
+		if (worldID!=0)
+		{
+			script->setAttribute("worldID",wid.str().c_str(),ec,worldID,false);
+			script->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+			script->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+		}
+	}
     const AtomicString& srcValue = script->getAttribute(srcAttr);
     // Allow the host to disllow script loads (using the XSSAuditor, etc.)
     if (!m_host->shouldLoadExternalScriptFromSrc(srcValue))
