@@ -79,9 +79,9 @@ v8::Handle<v8::Value> V8Node::insertBeforeCallback(const v8::Arguments& args)
 	wid << worldID;
 	if ((newChild->isHTMLElement())&&(worldID!=0))
 	{
-		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0);
+		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0,false);
 	}
     bool success = imp->insertBefore(newChild, refChild, ec, true);
     if (ec) {
@@ -110,9 +110,9 @@ v8::Handle<v8::Value> V8Node::replaceChildCallback(const v8::Arguments& args)
 	wid << worldID;
 	if ((newChild->isHTMLElement())&&(worldID!=0))
 	{
-		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0);
+		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0,false);
 	}
     bool success = imp->replaceChild(newChild, oldChild, ec, true);
     if (ec) {
@@ -158,9 +158,9 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
 	wid << worldID;
 	if ((newChild->isHTMLElement())&&(worldID!=0))
 	{
-		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0);
-		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0);
+		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0,false);
+		((Element*)newChild)->setAttribute("ROACL",(wid.str()+";").c_str(),ec,0,false);
 	}
     bool success = imp->appendChild(newChild, ec, true);
     if (ec) {

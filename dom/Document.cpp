@@ -2187,6 +2187,13 @@ void Document::write(const String& text, Document* ownerDocument)
 		std::ostringstream wid;
 		wid << worldID;
 		std::string temp2write = " worldID = \"" + wid.str() + "\" ACL = \"" + wid.str() + ";\" ROACL = \""+ wid.str() +";\"";
+		//this shouldn't be necessary as we already injected the window object upon initialization.
+		//if ((!isolatedContext->getSharedLibId())&&(isolatedContext->getSharedLibId()!=""))
+		//{
+		//	temp2write = temp2write + " SharedLibId = \"" + isolatedContext->getSharedLibId() + "\"";
+		//}
+		//currently uselibid is not an attr of isolatedworld. If we want to propagate uselibid, we need to restructure that part too.
+		//but it's definitely doable.
 		String str2write(temp2write.c_str());
 		int scriptlevel = 0, currentpointer = 0;
 		while (!transform(text2, str2write, scriptlevel, currentpointer)){}
