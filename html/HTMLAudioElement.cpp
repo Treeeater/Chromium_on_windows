@@ -28,7 +28,8 @@
 
 #if ENABLE(VIDEO)
 #include "HTMLAudioElement.h"
-
+#include "V8IsolatedContext.h"
+#include <sstream>
 #include "HTMLNames.h"
 
 namespace WebCore {
@@ -49,6 +50,20 @@ PassRefPtr<HTMLAudioElement> HTMLAudioElement::create(const QualifiedName& tagNa
 PassRefPtr<HTMLAudioElement> HTMLAudioElement::createForJSConstructor(Document* document, const String& src)
 {
     RefPtr<HTMLAudioElement> audio = adoptRef(new HTMLAudioElement(audioTag, document));
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	std::ostringstream wid;
+	wid << worldID;
+	std::string aclid = wid.str()+";";
+	std::string aclname = "ACL";
+	std::string ROACLname = "ROACL";
+	ExceptionCode ec;
+	if (worldID != 0)
+	{
+		audio->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+		audio->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+	}
     audio->setPreload("auto");
     if (!src.isNull()) {
         audio->setSrc(src);

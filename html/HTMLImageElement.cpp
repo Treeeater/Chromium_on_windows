@@ -34,6 +34,8 @@
 #include "HTMLNames.h"
 #include "RenderImage.h"
 #include "ScriptEventListener.h"
+#include "V8IsolatedContext.h"
+#include <sstream>
 
 using namespace std;
 
@@ -72,6 +74,21 @@ HTMLImageElement::~HTMLImageElement()
 PassRefPtr<HTMLImageElement> HTMLImageElement::createForJSConstructor(Document* document, const int* optionalWidth, const int* optionalHeight)
 {
     RefPtr<HTMLImageElement> image = adoptRef(new HTMLImageElement(imgTag, document));
+	//image element should have the ACL/ROACL property
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	std::ostringstream wid;
+	wid << worldID;
+	std::string aclid = wid.str()+";";
+	std::string aclname = "ACL";
+	std::string ROACLname = "ROACL";
+	ExceptionCode ec;
+	if (worldID != 0)
+	{
+		image->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+		image->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+	}
     if (optionalWidth)
         image->setWidth(*optionalWidth);
     if (optionalHeight > 0)

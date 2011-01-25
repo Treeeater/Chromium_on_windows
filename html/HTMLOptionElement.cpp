@@ -38,6 +38,8 @@
 #include <wtf/StdLibExtras.h>
 #include <wtf/Vector.h>
 #include "V8Binding.h"
+#include "V8IsolatedContext.h"
+#include <sstream>
 
 namespace WebCore {
 
@@ -63,7 +65,19 @@ PassRefPtr<HTMLOptionElement> HTMLOptionElement::createForJSConstructor(Document
         bool defaultSelected, bool selected, ExceptionCode& ec)
 {
     RefPtr<HTMLOptionElement> element = adoptRef(new HTMLOptionElement(optionTag, document));
-
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	std::ostringstream wid;
+	wid << worldID;
+	std::string aclid = wid.str()+";";
+	std::string aclname = "ACL";
+	std::string ROACLname = "ROACL";
+	if (worldID != 0)
+	{
+		element->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+		element->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+	}
     RefPtr<Text> text = Text::create(document, data.isNull() ? "" : data);
 
     ec = 0;
