@@ -72,7 +72,9 @@
 #include "KURL.h"
 #include "Page.h"
 #include "Settings.h"
+#include "V8IsolatedContext.h"
 #include <wtf/text/CString.h>
+#include <sstream>
 
 #include "DocTypeStrings.cpp"
 
@@ -302,7 +304,23 @@ PassRefPtr<Element> HTMLDocument::createElement(const AtomicString& name, Except
         ec = INVALID_CHARACTER_ERR;
         return 0;
     }
-    return HTMLElementFactory::createHTMLElement(QualifiedName(nullAtom, name.lower(), xhtmlNamespaceURI), this, 0, false);
+	RefPtr<Element> element = HTMLElementFactory::createHTMLElement(QualifiedName(nullAtom, name.lower(), xhtmlNamespaceURI), this, 0, false);
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	if (worldID != 0)
+	{
+		std::ostringstream wid;
+		wid << worldID;
+		std::string aclid = wid.str()+";";
+		std::string aclname = "ACL";
+		std::string ROACLname = "ROACL";
+		std::string worldName = "worldID";
+		element->setAttribute(aclname.c_str(),aclid.c_str(),ec,worldID,false);
+		element->setAttribute(ROACLname.c_str(),aclid.c_str(),ec,worldID,false);
+		element->setAttribute(worldName.c_str(),wid.str().c_str(),ec,worldID,false);
+	}
+    return element;
 }
 
 void HTMLDocument::addItemToMap(HashCountedSet<AtomicStringImpl*>& map, const AtomicString& name)

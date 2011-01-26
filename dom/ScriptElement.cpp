@@ -246,7 +246,11 @@ void ScriptElementData::execute(CachedScript* cachedScript)
     if (cachedScript->errorOccurred())
         m_scriptElement->dispatchErrorEvent();
     else {
-        evaluateScript(ScriptSourceCode(cachedScript));
+		if ((m_element->getAttribute("worldID")!=NULL)&&(m_element->getAttribute("worldID")!=""))
+		{
+			evaluateScript(ScriptSourceCode(cachedScript),m_element->getAttribute("worldID"));
+		}
+		else evaluateScript(ScriptSourceCode(cachedScript));
         m_scriptElement->dispatchLoadEvent();
     }
     cachedScript->removeClient(this);
