@@ -77,6 +77,13 @@ V8IsolatedContext::V8IsolatedContext(V8Proxy* proxy, int extensionGroup, int WID
     m_context->get()->UseDefaultSecurityToken();
 
     proxy->frame()->loader()->client()->didCreateIsolatedScriptContext();
+	//inject dummy object for all third-p scripts
+	if (WID!=0)
+	{
+		v8::Local<v8::Value> dummy = v8::String::New("dummy_obj_zyc");
+		v8::Local<v8::Value> empty = v8::String::New("");
+		m_context->get()->Global()->Set(dummy, empty);
+	}
 	//Acquire all used libraries
 	if (UseLibId!="")
 	{

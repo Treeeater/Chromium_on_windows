@@ -207,9 +207,9 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 							break;
 						}
 					}
-					if (flag == false) return v8::Null();
+					if (flag == false) return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));
 				}
-				else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
+				else return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));		//default policy is: script w/ worldID cannot access node w/o ACL
 			}
 		}
 	}

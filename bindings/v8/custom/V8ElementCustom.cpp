@@ -84,9 +84,11 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 							break;
 						}
 					}
-					if (flag == false) return v8::Null();
+					if (flag == false) return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));
+					//instead of returning v8::Null(), we return a dummy value injected at the beginning of execution. This would make some 3rd-p scripts work because it does
+					//not generate an unrecoverable error to v8.
 				}
-				else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
+				else return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));		//default policy is: script w/ worldID cannot access node w/o ACL
 			}
 		}
 	}
