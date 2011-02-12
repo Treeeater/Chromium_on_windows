@@ -565,8 +565,12 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
 		if (worldID==0)
 		{
 			m_attributeMap->addAttribute(createAttribute(QualifiedName(nullAtom, localName, nullAtom), value));
-			this->removeAttribute("ACL", ec);
-			this->removeAttribute("ROACL", ec);
+			if (name=="src")
+			{	
+				//heuristic:only tainting nodes whose src is changed
+				this->removeAttribute("ACL", ec);
+				this->removeAttribute("ROACL", ec);
+			}
 		}
 		else
 		{

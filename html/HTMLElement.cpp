@@ -45,6 +45,7 @@
 #include "Text.h"
 #include "TextIterator.h"
 #include "markup.h"
+#include "V8IsolatedContext.h"
 #include <wtf/StdLibExtras.h>
 
 namespace WebCore {
@@ -363,6 +364,14 @@ static PassRefPtr<DocumentFragment> createFragmentFromSource(const String& marku
 
 void HTMLElement::setInnerHTML(const String& html, ExceptionCode& ec)
 {
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0)	worldID = isolatedContext->getWorldID();
+	if (worldID == 0)
+	{
+		this->removeAttribute("ACL", ec);
+		this->removeAttribute("ROACL", ec);
+	}
     // FIXME: This code can be removed, it's handled by the HTMLDocumentParser correctly.
     if (useLegacyTreeBuilder(document()) && (hasLocalName(scriptTag) || hasLocalName(styleTag))) {
         // Script and CSS source shouldn't be parsed as HTML.
@@ -405,7 +414,14 @@ void HTMLElement::setInnerText(const String& text, ExceptionCode& ec)
         ec = NO_MODIFICATION_ALLOWED_ERR;
         return;
     }
-
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0)	worldID = isolatedContext->getWorldID();
+	if (worldID == 0)
+	{
+		this->removeAttribute("ACL", ec);
+		this->removeAttribute("ROACL", ec);
+	}
     // FIXME: This doesn't take whitespace collapsing into account at all.
 
     if (!text.contains('\n') && !text.contains('\r')) {
