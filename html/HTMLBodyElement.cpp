@@ -140,37 +140,97 @@ void HTMLBodyElement::parseMappedAttribute(Attribute* attr)
         if (attached())
             document()->recalcStyle(Force);
     } else if (attr->name() == onloadAttr)
-        document()->setWindowAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().loadEvent, eventlistener);
+	}
     else if (attr->name() == onbeforeunloadAttr)
-        document()->setWindowAttributeEventListener(eventNames().beforeunloadEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().beforeunloadEvent, eventlistener);
+	}
     else if (attr->name() == onunloadAttr)
-        document()->setWindowAttributeEventListener(eventNames().unloadEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().unloadEvent, eventlistener);
+	}
     else if (attr->name() == onpagehideAttr)
-        document()->setWindowAttributeEventListener(eventNames().pagehideEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().pagehideEvent, eventlistener);
+	}
     else if (attr->name() == onpageshowAttr)
-        document()->setWindowAttributeEventListener(eventNames().pageshowEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().pageshowEvent, eventlistener);
+	}
     else if (attr->name() == onpopstateAttr)
-        document()->setWindowAttributeEventListener(eventNames().popstateEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().popstateEvent, eventlistener);
+	}
     else if (attr->name() == onblurAttr)
-        document()->setWindowAttributeEventListener(eventNames().blurEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().blurEvent, eventlistener);
+	}
     else if (attr->name() == onfocusAttr)
-        document()->setWindowAttributeEventListener(eventNames().focusEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().focusEvent, eventlistener);
+	}
 #if ENABLE(ORIENTATION_EVENTS)
     else if (attr->name() == onorientationchangeAttr)
-        document()->setWindowAttributeEventListener(eventNames().orientationchangeEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().orientationchangeEvent, eventlistener);
+	}
 #endif
     else if (attr->name() == onhashchangeAttr)
-        document()->setWindowAttributeEventListener(eventNames().hashchangeEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().hashchangeEvent, eventlistener);
+	}
     else if (attr->name() == onresizeAttr)
-        document()->setWindowAttributeEventListener(eventNames().resizeEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().resizeEvent, eventlistener);
+	}
     else if (attr->name() == onscrollAttr)
-        document()->setWindowAttributeEventListener(eventNames().scrollEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().scrollEvent, eventlistener);
+	}
     else if (attr->name() == onstorageAttr)
-        document()->setWindowAttributeEventListener(eventNames().storageEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().storageEvent, eventlistener);
+	}
     else if (attr->name() == ononlineAttr)
-        document()->setWindowAttributeEventListener(eventNames().onlineEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().onlineEvent, eventlistener);
+	}
     else if (attr->name() == onofflineAttr)
-        document()->setWindowAttributeEventListener(eventNames().offlineEvent, createAttributeEventListener(document()->frame(), attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        document()->setWindowAttributeEventListener(eventNames().offlineEvent, eventlistener);
+	}
     else
         HTMLElement::parseMappedAttribute(attr);
 }

@@ -153,11 +153,23 @@ void HTMLImageElement::parseMappedAttribute(Attribute* attr)
     } else if (attrName == ismapAttr)
         ismap = true;
     else if (attrName == onabortAttr)
-        setAttributeEventListener(eventNames().abortEvent, createAttributeEventListener(this, attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().abortEvent, eventlistener);
+	}
     else if (attrName == onloadAttr)
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
+	}
     else if (attrName == onbeforeloadAttr)
-        setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().beforeloadEvent, eventlistener);
+	}
     else if (attrName == compositeAttr) {
         if (!parseCompositeOperator(attr->value(), m_compositeOperator))
             m_compositeOperator = CompositeSourceOver;

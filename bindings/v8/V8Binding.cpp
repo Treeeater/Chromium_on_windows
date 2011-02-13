@@ -552,6 +552,7 @@ v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo& info,
                                            const QualifiedName& name) 
 {
     Element* imp = V8Element::toNative(info.Holder());
+	if (!R_check(imp)) return v8::Handle<v8::Value>(v8::Undefined());
     return v8ExternalString(imp->getAttribute(name));
 }
 
@@ -590,6 +591,44 @@ bool RO_check(Node *imp)					//Checking if the node is read only to that script
 			}
 			else return false;
 		}
+	}
+	return true;
+}
+
+bool R_check(Node *imp)					//Checking if the node is read-able to that script
+{
+	if (!imp) return true;
+	if (imp->isHTMLElement())
+	{
+		int worldID = 0;
+		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+		if (isolatedContext!=0) 
+		{
+			if (isolatedContext->is_SharedLib())
+			{
+				return true;
+			}
+			worldID = isolatedContext->getWorldID();
+			if (worldID == 0) return true;
+		}
+		else return true;
+		String ROACL = ((Element*) imp)->getAttribute("ACL");
+		if ((ROACL != NULL)&&(ROACL != ""))
+		{
+			Vector<WTF::String> ACLs;
+			ROACL.split(";",ACLs);
+			for (unsigned int i=0; i<ACLs.size(); i++)
+			{
+				if (worldID==ACLs[i].toInt())
+				{
+					ACLs.clear();
+					return true;
+				}
+			}
+			ACLs.clear();
+			return false;
+		}
+		else return false;
 	}
 	return true;
 }

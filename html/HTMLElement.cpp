@@ -166,93 +166,177 @@ void HTMLElement::parseMappedAttribute(Attribute* attr)
 // standard events
     else if (attr->name() == onclickAttr) {
 		//zyc
-		RefPtr<V8LazyEventListener> eventlistner = createAttributeEventListener(this, attr);
-		if (attr->getWorldID()!=0) eventlistner->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().clickEvent, eventlistner);
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().clickEvent, eventlistener);
     } else if (attr->name() == oncontextmenuAttr) {
-        setAttributeEventListener(eventNames().contextmenuEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().contextmenuEvent, eventlistener);
     } else if (attr->name() == ondblclickAttr) {
-        setAttributeEventListener(eventNames().dblclickEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dblclickEvent, eventlistener);
     } else if (attr->name() == onmousedownAttr) {
-        setAttributeEventListener(eventNames().mousedownEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mousedownEvent, eventlistener);
     } else if (attr->name() == onmousemoveAttr) {
-        setAttributeEventListener(eventNames().mousemoveEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mousemoveEvent, eventlistener);
     } else if (attr->name() == onmouseoutAttr) {
-        setAttributeEventListener(eventNames().mouseoutEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mouseoutEvent, eventlistener);
     } else if (attr->name() == onmouseoverAttr) {
-        setAttributeEventListener(eventNames().mouseoverEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mouseoverEvent, eventlistener);
     } else if (attr->name() == onmouseupAttr) {
-        setAttributeEventListener(eventNames().mouseupEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mouseupEvent, eventlistener);
     } else if (attr->name() == onmousewheelAttr) {
-        setAttributeEventListener(eventNames().mousewheelEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().mousewheelEvent, eventlistener);
     } else if (attr->name() == onfocusAttr) {
-        setAttributeEventListener(eventNames().focusEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().focusEvent, eventlistener);
     } else if (attr->name() == onfocusinAttr) {
-        setAttributeEventListener(eventNames().focusinEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().focusinEvent, eventlistener);
     } else if (attr->name() == onfocusoutAttr) {
-        setAttributeEventListener(eventNames().focusoutEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().focusoutEvent, eventlistener);
     } else if (attr->name() == onblurAttr) {
-        setAttributeEventListener(eventNames().blurEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().blurEvent, eventlistener);
     } else if (attr->name() == onkeydownAttr) {
-        setAttributeEventListener(eventNames().keydownEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().keydownEvent, eventlistener);
     } else if (attr->name() == onkeypressAttr) {
-        setAttributeEventListener(eventNames().keypressEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().keypressEvent, eventlistener);
     } else if (attr->name() == onkeyupAttr) {
-        setAttributeEventListener(eventNames().keyupEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().keyupEvent, eventlistener);
     } else if (attr->name() == onscrollAttr) {
-        setAttributeEventListener(eventNames().scrollEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().scrollEvent, eventlistener);
     } else if (attr->name() == onbeforecutAttr) {
-        setAttributeEventListener(eventNames().beforecutEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().beforecutEvent, eventlistener);
     } else if (attr->name() == oncutAttr) {
-        setAttributeEventListener(eventNames().cutEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().cutEvent, eventlistener);
     } else if (attr->name() == onbeforecopyAttr) {
-        setAttributeEventListener(eventNames().beforecopyEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().beforecopyEvent, eventlistener);
     } else if (attr->name() == oncopyAttr) {
-        setAttributeEventListener(eventNames().copyEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().copyEvent, eventlistener);
     } else if (attr->name() == onbeforepasteAttr) {
-        setAttributeEventListener(eventNames().beforepasteEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().beforepasteEvent, eventlistener);
     } else if (attr->name() == onpasteAttr) {
-        setAttributeEventListener(eventNames().pasteEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().pasteEvent, eventlistener);
     } else if (attr->name() == ondragenterAttr) {
-        setAttributeEventListener(eventNames().dragenterEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragenterEvent, eventlistener);
     } else if (attr->name() == ondragoverAttr) {
-        setAttributeEventListener(eventNames().dragoverEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragoverEvent, eventlistener);
     } else if (attr->name() == ondragleaveAttr) {
-        setAttributeEventListener(eventNames().dragleaveEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragleaveEvent, eventlistener);
     } else if (attr->name() == ondropAttr) {
-        setAttributeEventListener(eventNames().dropEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dropEvent, eventlistener);
     } else if (attr->name() == ondragstartAttr) {
-        setAttributeEventListener(eventNames().dragstartEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragstartEvent, eventlistener);
     } else if (attr->name() == ondragAttr) {
-        setAttributeEventListener(eventNames().dragEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragEvent, eventlistener);
     } else if (attr->name() == ondragendAttr) {
-        setAttributeEventListener(eventNames().dragendEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().dragendEvent, eventlistener);
     } else if (attr->name() == onselectstartAttr) {
-        setAttributeEventListener(eventNames().selectstartEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().selectstartEvent, eventlistener);
     } else if (attr->name() == onsubmitAttr) {
-        setAttributeEventListener(eventNames().submitEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().submitEvent, eventlistener);
     } else if (attr->name() == onerrorAttr) {
-        setAttributeEventListener(eventNames().errorEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().errorEvent, eventlistener);
     } else if (attr->name() == onwebkitanimationstartAttr) {
-        setAttributeEventListener(eventNames().webkitAnimationStartEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().webkitAnimationStartEvent, eventlistener);
     } else if (attr->name() == onwebkitanimationiterationAttr) {
-        setAttributeEventListener(eventNames().webkitAnimationIterationEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().webkitAnimationIterationEvent, eventlistener);
     } else if (attr->name() == onwebkitanimationendAttr) {
-        setAttributeEventListener(eventNames().webkitAnimationEndEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().webkitAnimationEndEvent, eventlistener);
     } else if (attr->name() == onwebkittransitionendAttr) {
-        setAttributeEventListener(eventNames().webkitTransitionEndEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().webkitTransitionEndEvent, eventlistener);
     } else if (attr->name() == oninputAttr) {
-        setAttributeEventListener(eventNames().inputEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().inputEvent, eventlistener);
     } else if (attr->name() == oninvalidAttr) {
-        setAttributeEventListener(eventNames().invalidEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().invalidEvent, eventlistener);
     } else if (attr->name() == ontouchstartAttr) {
-        setAttributeEventListener(eventNames().touchstartEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().touchstartEvent, eventlistener);
     } else if (attr->name() == ontouchmoveAttr) {
-        setAttributeEventListener(eventNames().touchmoveEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().touchmoveEvent, eventlistener);
     } else if (attr->name() == ontouchendAttr) {
-        setAttributeEventListener(eventNames().touchendEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().touchendEvent, eventlistener);
     } else if (attr->name() == ontouchcancelAttr) {
-        setAttributeEventListener(eventNames().touchcancelEvent, createAttributeEventListener(this, attr));
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
+        setAttributeEventListener(eventNames().touchcancelEvent, eventlistener);
     }
 }
 

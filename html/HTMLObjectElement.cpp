@@ -94,9 +94,16 @@ void HTMLObjectElement::parseMappedAttribute(Attribute* attr)
         if (renderer())
           m_needWidgetUpdate = true;
     } else if (attr->name() == onloadAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
-    else if (attr->name() == onbeforeloadAttr)
+	}    else if (attr->name() == onbeforeloadAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+	}
     else if (attr->name() == nameAttr) {
         const AtomicString& newName = attr->value();
         if (isDocNamedItem() && inDocument() && document()->isHTMLDocument()) {

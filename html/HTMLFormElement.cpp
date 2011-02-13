@@ -359,9 +359,17 @@ void HTMLFormElement::parseMappedAttribute(Attribute* attr)
         else
             document()->unregisterForDocumentActivationCallbacks(this);
     } else if (attr->name() == onsubmitAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().submitEvent, createAttributeEventListener(this, attr));
+	}
     else if (attr->name() == onresetAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().resetEvent, createAttributeEventListener(this, attr));
+	}
     else if (attr->name() == nameAttr) {
         const AtomicString& newName = attr->value();
         if (inDocument() && document()->isHTMLDocument()) {

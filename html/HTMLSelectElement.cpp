@@ -224,7 +224,11 @@ void HTMLSelectElement::parseMappedAttribute(Attribute* attr)
         // Don't map 'align' attribute.  This matches what Firefox, Opera and IE do.
         // See http://bugs.webkit.org/show_bug.cgi?id=12072
     } else if (attr->name() == onchangeAttr) {
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().changeEvent, createAttributeEventListener(this, attr));
+	}
     } else
         HTMLFormControlElementWithState::parseMappedAttribute(attr);
 }

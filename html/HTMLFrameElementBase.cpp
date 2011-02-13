@@ -140,12 +140,24 @@ void HTMLFrameElementBase::parseMappedAttribute(Attribute* attr)
         if (contentFrame())
             contentFrame()->setInViewSourceMode(viewSourceMode());
     } else if (attr->name() == onloadAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+	}
     else if (attr->name() == onbeforeloadAttr)
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+	}
     else if (attr->name() == onbeforeunloadAttr) {
         // FIXME: should <frame> elements have beforeunload handlers?
+	{
+		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
+		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
         setAttributeEventListener(eventNames().beforeunloadEvent, createAttributeEventListener(this, attr));
+	}
     } else
         HTMLFrameOwnerElement::parseMappedAttribute(attr);
 }
