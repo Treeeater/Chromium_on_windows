@@ -37,6 +37,7 @@
 
 #include "V8Binding.h"
 #include "V8Proxy.h"
+#include "V8IsolatedContext.h"
 #include "WorkerContext.h"
 #include "WorkerContextExecutionProxy.h"
 #include "WorkerThread.h"
@@ -47,6 +48,13 @@ ScheduledAction::ScheduledAction(v8::Handle<v8::Context> context, v8::Handle<v8:
     : m_context(context)
     , m_code(String(), KURL(), 0)
 {
+	//zyc
+	m_worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	int worldID = 0;
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	if (worldID != 0) m_worldID = worldID;
+	//done zyc
     m_function = v8::Persistent<v8::Function>::New(func);
 
 #ifndef NDEBUG
@@ -107,11 +115,21 @@ void ScheduledAction::execute(V8Proxy* proxy)
 
     v8::HandleScope handleScope;
     v8::Handle<v8::Context> v8Context = v8::Local<v8::Context>::New(m_context.get());
-    if (v8Context.IsEmpty())
-        return; // JS may not be enabled.
 
-    v8::Context::Scope scope(v8Context);
+	if (v8Context.IsEmpty())
+		return; // JS may not be enabled.
 
+	if (m_worldID!=0){
+		//zyc
+		//the scheduled action should execute in a different world.
+		V8IsolatedContext* IsolatedContext = proxy->getIWMap().get(m_worldID);
+		if (IsolatedContext)
+		{
+			v8Context = IsolatedContext->context();					//should add if isempty check here.
+		}
+	}
+	v8::Context::Scope scope(v8Context);
+	//donezyc
     proxy->setTimerCallback(true);
 
     // FIXME: Need to implement timeouts for preempting a long-running script.

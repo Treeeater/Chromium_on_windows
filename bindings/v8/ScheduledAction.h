@@ -34,6 +34,7 @@
 #include "OwnHandle.h"
 #include "ScriptSourceCode.h"
 #include "V8GCController.h"
+#include "V8IsolatedContext.h"
 #include <wtf/Forward.h>
 
 #include <v8.h>
@@ -53,6 +54,13 @@ namespace WebCore {
             , m_argv(0)
             , m_code(code, url)
         {
+			//zyc
+			m_worldID = 0;
+			V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+			int worldID = 0;
+			if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+			if (worldID != 0) m_worldID = worldID;
+			//done zyc
         }
 
         virtual ~ScheduledAction();
@@ -69,6 +77,7 @@ namespace WebCore {
         int m_argc;
         v8::Persistent<v8::Value>* m_argv;
         ScriptSourceCode m_code;
+		int m_worldID;
     };
 
 } // namespace WebCore
