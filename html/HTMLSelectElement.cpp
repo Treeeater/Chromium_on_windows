@@ -227,7 +227,7 @@ void HTMLSelectElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().changeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().changeEvent, eventlistener);
 	}
     } else
         HTMLFormControlElementWithState::parseMappedAttribute(attr);

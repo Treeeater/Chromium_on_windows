@@ -64,6 +64,7 @@
 #include "V8Node.h"
 #include "V8Proxy.h"
 #include "V8Utilities.h"
+#include "V8IsolatedContext.h"
 #if ENABLE(WEB_SOCKETS)
 #include "WebSocket.h"
 #endif
@@ -265,7 +266,11 @@ v8::Handle<v8::Value> V8DOMWindow::addEventListenerCallback(const v8::Arguments&
     if (!proxy)
         return v8::Undefined();
 
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	int worldID = 0;
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
     RefPtr<EventListener> listener = V8DOMWrapper::getEventListener(args[1], false, ListenerFindOrCreate);
+	listener->setWorldID(worldID);
 
     if (listener) {
         imp->addEventListener(eventType, listener, useCapture);

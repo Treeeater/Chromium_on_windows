@@ -97,12 +97,12 @@ void HTMLObjectElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}    else if (attr->name() == onbeforeloadAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().beforeloadEvent, eventlistener);
 	}
     else if (attr->name() == nameAttr) {
         const AtomicString& newName = attr->value();

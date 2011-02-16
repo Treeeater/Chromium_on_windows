@@ -113,93 +113,93 @@ void HTMLFrameSetElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}
     else if (attr->name() == onbeforeunloadAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}
     else if (attr->name() == onunloadAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}
     else if (attr->name() == onblurAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}
     else if (attr->name() == onfocusAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().focusEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().focusEvent, eventlistener);
 	}
     else if (attr->name() == onfocusinAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().focusinEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().focusinEvent, eventlistener);
 	}
     else if (attr->name() == onfocusoutAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().focusoutEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().focusoutEvent, eventlistener);
 	}
 #if ENABLE(ORIENTATION_EVENTS)
     else if (attr->name() == onorientationchangeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().orientationchangeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().orientationchangeEvent, eventlistener);
 	}
 #endif
     else if (attr->name() == onhashchangeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().hashchangeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().hashchangeEvent, eventlistener);
 	}
     else if (attr->name() == onresizeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().resizeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().resizeEvent, eventlistener);
 	}
     else if (attr->name() == onscrollAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().scrollEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().scrollEvent, eventlistener);
 	}
     else if (attr->name() == onstorageAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().storageEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().storageEvent, eventlistener);
 	}
     else if (attr->name() == ononlineAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().onlineEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().onlineEvent, eventlistener);
 	}
     else if (attr->name() == onofflineAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().offlineEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().offlineEvent, eventlistener);
 	}
     else if (attr->name() == onpopstateAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(document()->frame(), attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().popstateEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().popstateEvent, eventlistener);
 	}
     else
         HTMLElement::parseMappedAttribute(attr);

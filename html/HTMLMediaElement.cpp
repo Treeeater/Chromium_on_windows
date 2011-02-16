@@ -215,128 +215,128 @@ void HTMLMediaElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().abortEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().abortEvent, eventlistener);
 	}
     else if (attrName == onbeforeloadAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().beforeloadEvent, eventlistener);
 	}    else if (attrName == oncanplayAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().canplayEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().canplayEvent, eventlistener);
 	}    else if (attrName == oncanplaythroughAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().canplaythroughEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().canplaythroughEvent, eventlistener);
 	}    else if (attrName == ondurationchangeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().durationchangeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().durationchangeEvent, eventlistener);
 	}    else if (attrName == onemptiedAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().emptiedEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().emptiedEvent, eventlistener);
 	}    else if (attrName == onendedAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().endedEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().endedEvent, eventlistener);
 	}    else if (attrName == onerrorAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().errorEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().errorEvent, eventlistener);
 	}    else if (attrName == onloadeddataAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadeddataEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadeddataEvent, eventlistener);
 	}    else if (attrName == onloadedmetadataAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadedmetadataEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadedmetadataEvent, eventlistener);
 	}    else if (attrName == onloadstartAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadstartEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadstartEvent, eventlistener);
 	}    else if (attrName == onpauseAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().pauseEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().pauseEvent, eventlistener);
 	}    else if (attrName == onplayAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().playEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().playEvent, eventlistener);
 	}    else if (attrName == onplayingAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().playingEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().playingEvent, eventlistener);
 	}    else if (attrName == onprogressAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().progressEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().progressEvent, eventlistener);
 	}    else if (attrName == onratechangeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().ratechangeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().ratechangeEvent, eventlistener);
 	}    else if (attrName == onseekedAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().seekedEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().seekedEvent, eventlistener);
 	}    else if (attrName == onseekingAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().seekingEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().seekingEvent, eventlistener);
 	}    else if (attrName == onstalledAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().stalledEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().stalledEvent, eventlistener);
 	}    else if (attrName == onsuspendAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().suspendEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().suspendEvent, eventlistener);
 	}    else if (attrName == ontimeupdateAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().timeupdateEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().timeupdateEvent, eventlistener);
 	}    else if (attrName == onvolumechangeAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().volumechangeEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().volumechangeEvent, eventlistener);
 	}    else if (attrName == onwaitingAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().waitingEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().waitingEvent, eventlistener);
 	}    else if (attrName == onwebkitbeginfullscreenAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().webkitbeginfullscreenEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().webkitbeginfullscreenEvent, eventlistener);
 	}    else if (attrName == onwebkitendfullscreenAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().webkitendfullscreenEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().webkitendfullscreenEvent, eventlistener);
 	}    else
         HTMLElement::parseMappedAttribute(attr);
 }

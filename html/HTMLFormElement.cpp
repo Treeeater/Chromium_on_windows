@@ -362,13 +362,13 @@ void HTMLFormElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().submitEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().submitEvent, eventlistener);
 	}
     else if (attr->name() == onresetAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().resetEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().resetEvent, eventlistener);
 	}
     else if (attr->name() == nameAttr) {
         const AtomicString& newName = attr->value();

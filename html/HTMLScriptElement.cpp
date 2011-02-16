@@ -75,19 +75,19 @@ void HTMLScriptElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().loadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().loadEvent, eventlistener);
 	}
     else if (attrName == onbeforeloadAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().beforeloadEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().beforeloadEvent, eventlistener);
 	}
     else if (attrName == onbeforeprocessAttr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().beforeprocessEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().beforeprocessEvent, eventlistener);
 	}
     else
         HTMLElement::parseMappedAttribute(attr);

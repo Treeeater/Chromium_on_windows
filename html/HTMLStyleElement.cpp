@@ -54,7 +54,7 @@ void HTMLStyleElement::parseMappedAttribute(Attribute* attr)
 	{
 		RefPtr<V8LazyEventListener> eventlistener = createAttributeEventListener(this, attr);
 		if (attr->getWorldID()!=0) eventlistener->setWorldID(attr->getWorldID());
-        setAttributeEventListener(eventNames().beforeprocessEvent, createAttributeEventListener(this, attr));
+        setAttributeEventListener(eventNames().beforeprocessEvent, eventlistener);
 	}
     else
         HTMLElement::parseMappedAttribute(attr);
