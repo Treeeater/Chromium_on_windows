@@ -769,6 +769,7 @@ v8::Local<v8::Context> V8Proxy::context(Frame* frame)
         return v8::Local<v8::Context>();
 
     if (V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered()) {
+		if (isolatedContext->getWorldID()) return context;
         context = v8::Local<v8::Context>::New(isolatedContext->context());
         if (frame != V8Proxy::retrieveFrame(context))
             return v8::Local<v8::Context>();
