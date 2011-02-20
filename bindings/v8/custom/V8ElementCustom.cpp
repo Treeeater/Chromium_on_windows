@@ -57,12 +57,13 @@ namespace WebCore {
 
 v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 {
+	/*
 	int worldID = 0;
 	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-
+	*/
     if (!impl)
         return v8::Null();
-
+	/*
 	if (isolatedContext!=0) 
 	{
 		if (!isolatedContext->is_SharedLib())
@@ -84,15 +85,15 @@ v8::Handle<v8::Value> toV8(Element* impl, bool forceNewObject)
 							break;
 						}
 					}
-					if (flag == false) return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));
+					if (flag == false) return v8::Undefined();
 					//instead of returning v8::Null(), we return a dummy value injected at the beginning of execution. This would make some 3rd-p scripts work because it does
 					//not generate an unrecoverable error to v8.
 				}
-				else return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));		//default policy is: script w/ worldID cannot access node w/o ACL
+				else return v8::Undefined();		//default policy is: script w/ worldID cannot access node w/o ACL
 			}
 		}
 	}
-
+	*/
     if (impl->isHTMLElement())
         return toV8(static_cast<HTMLElement*>(impl), forceNewObject);
 #if ENABLE(SVG)

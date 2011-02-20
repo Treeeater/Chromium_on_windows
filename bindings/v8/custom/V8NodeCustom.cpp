@@ -174,9 +174,10 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
 
 v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 {
+	/*
 	int worldID = 0;
 	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-
+	*/
     if (!impl)
         return v8::Null();
 
@@ -185,7 +186,7 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
         if (!wrapper.IsEmpty())
             return wrapper;
     }
-
+	/*
 	if (isolatedContext!=0) 
 	{
 		if (!isolatedContext->is_SharedLib())
@@ -207,13 +208,13 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 							break;
 						}
 					}
-					if (flag == false) return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));
+					if (flag == false) return v8::Undefined();
 				}
-				else return isolatedContext->context()->Global()->Get(v8::String::New("dummy_obj_zyc"));		//default policy is: script w/ worldID cannot access node w/o ACL
+				else return v8::Undefined();		//default policy is: script w/ worldID cannot access node w/o ACL
 			}
 		}
 	}
-
+	*/
     switch (impl->nodeType()) {
     case Node::ELEMENT_NODE:
         return toV8(static_cast<Element*>(impl), forceNewObject);

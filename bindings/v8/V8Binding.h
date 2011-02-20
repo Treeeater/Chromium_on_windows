@@ -202,6 +202,7 @@ namespace WebCore {
 
     v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo&,
                                                const QualifiedName&);
+	void log(Node *imp);
 	bool RO_check(Node *imp);
 	bool R_check(Node *imp);		//added because of taint tracking. now the nodes can change acl/roacls on the fly, which requires tighter check.
     void setElementStringAttr(const v8::AccessorInfo&,

@@ -543,7 +543,7 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
         return;
     }
 
-	if ((!RO_check(this))&&fromJSC) return;
+	if (fromJSC&&(!RO_check(this))) return;
 
     const AtomicString& localName = shouldIgnoreAttributeCase(this) ? name.lower() : name;
 

@@ -44,6 +44,8 @@
 #include <wtf/text/CString.h>
 #include <wtf/text/StringBuffer.h>
 #include <wtf/text/StringHash.h>
+#include <iostream>
+#include <fstream>
 
 namespace WebCore {
 
@@ -556,6 +558,23 @@ v8::Handle<v8::Value> getElementStringAttr(const v8::AccessorInfo& info,
     return v8ExternalString(imp->getAttribute(name));
 }
 
+void log(Node *imp)
+{
+	std::string filepath = "C:\\Users\\Yuchen\\Desktop\\log.txt";
+	std::ifstream ifile(filepath.c_str());
+	if (!ifile) {
+		return;
+	}
+	ifile.close();
+	std::ofstream logfile(filepath.c_str(), std::ios::app);
+	logfile<<"NodeName is: "<<imp->nodeName().utf8().data()<<std::endl;
+	logfile<<"Source of the node is (if any): "<<((Element *)imp)->getAttribute("src").string().utf8().data()<<std::endl;
+	logfile<<"Text Content within the node is: "<<imp->textContent().utf8().data()<<std::endl;
+	logfile<<"************************************************************************"<<std::endl<<std::endl<<std::endl;
+	logfile.close();
+	return;
+}
+
 bool RO_check(Node *imp)					//Checking if the node is read only to that script
 {
 	if (!imp) return true;
@@ -587,9 +606,14 @@ bool RO_check(Node *imp)					//Checking if the node is read only to that script
 					}
 				}
 				ACLs.clear();
+				log(imp);
 				return false;
 			}
-			else return false;
+			else 
+			{
+				log(imp);
+				return false;
+			}
 		}
 	}
 	return true;
@@ -626,9 +650,14 @@ bool R_check(Node *imp)					//Checking if the node is read-able to that script
 				}
 			}
 			ACLs.clear();
+			log(imp);
 			return false;
 		}
-		else return false;
+		else
+		{
+			log(imp);
+			return false;
+		}
 	}
 	return true;
 }
