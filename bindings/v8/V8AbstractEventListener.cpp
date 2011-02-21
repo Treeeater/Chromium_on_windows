@@ -109,6 +109,23 @@ void V8AbstractEventListener::handleEvent(ScriptExecutionContext* context, Event
     invokeEventHandler(context, event, jsEvent);
 }
 
+v8::Local<v8::Object> V8AbstractEventListener::getListenerObject(ScriptExecutionContext* context)
+{
+	int world_ID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) 
+	{
+		world_ID = isolatedContext->getWorldID();
+		if (this->getWorldID() != world_ID)
+		{
+			v8::Local<v8::Object> ret = v8::Object::New();
+			return ret;
+		}
+	}
+	prepareListenerObject(context);
+	return v8::Local<v8::Object>::New(m_listener);
+}
+
 void V8AbstractEventListener::disposeListenerObject()
 {
     if (!m_listener.IsEmpty()) {

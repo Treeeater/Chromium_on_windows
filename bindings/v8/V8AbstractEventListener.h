@@ -77,11 +77,7 @@ namespace WebCore {
         virtual bool isLazy() const { return false; }
 
         // Returns the listener object, either a function or an object.
-        v8::Local<v8::Object> getListenerObject(ScriptExecutionContext* context)
-        {
-            prepareListenerObject(context);
-            return v8::Local<v8::Object>::New(m_listener);
-        }
+        v8::Local<v8::Object> getListenerObject(ScriptExecutionContext* context);
 
         v8::Local<v8::Object> getExistingListenerObject()
         {

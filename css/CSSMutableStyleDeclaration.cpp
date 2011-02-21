@@ -33,6 +33,7 @@
 #include "ExceptionCode.h"
 #include "StyledElement.h"
 #include "V8Binding.h"
+#include "V8IsolatedContext.h"
 
 using namespace std;
 
@@ -108,6 +109,7 @@ CSSMutableStyleDeclaration& CSSMutableStyleDeclaration::operator=(const CSSMutab
 
 String CSSMutableStyleDeclaration::getPropertyValue(int propertyID) const
 {
+	if (!R_check(m_node)) return String();
     RefPtr<CSSValue> value = getPropertyCSSValue(propertyID);
     if (value)
         return value->cssText();
@@ -445,6 +447,7 @@ bool CSSMutableStyleDeclaration::removeShorthandProperty(int propertyID, bool no
 
 String CSSMutableStyleDeclaration::removeProperty(int propertyID, bool notifyChanged, bool returnText)
 {
+	if (!RO_check(m_node)) return String();
     ASSERT(!m_iteratorCount);
 
     if (removeShorthandProperty(propertyID, notifyChanged)) {

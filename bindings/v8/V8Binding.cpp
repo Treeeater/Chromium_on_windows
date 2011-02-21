@@ -615,6 +615,13 @@ bool RO_check(Node *imp)					//Checking if the node is read only to that script
 				return false;
 			}
 		}
+		//if we want a full propagation we can uncomment the rest.
+		/*
+		else
+		{	
+			((HTMLElement*)imp)->removeAttribute("ACL", ec);
+			((HTMLElement*)imp)->removeAttribute("ROACL", ec);
+		}*/
 	}
 	return true;
 }

@@ -83,6 +83,7 @@
 #include "XMLNames.h"
 #include "htmlediting.h"
 #include "V8Binding.h"
+#include "V8IsolatedContext.h"
 
 #include <wtf/HashSet.h>
 #include <wtf/PassOwnPtr.h>
@@ -2406,6 +2407,18 @@ static inline bool tryAddEventListener(Node* targetNode, const AtomicString& eve
 
 bool Node::addEventListener(const AtomicString& eventType, PassRefPtr<EventListener> listener, bool useCapture)
 {
+	//If we want to propagate all the eventlistener modifications we just uncomment the following code.
+	/*
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	ExceptionCode ec;
+	if ((worldID == 0)&&(this->isHTMLElement())) 
+	{
+		((HTMLElement*)this)->removeAttribute("ACL", ec);
+		((HTMLElement*)this)->removeAttribute("ROACL", ec);
+	}
+	*/
 #if !ENABLE(SVG)
     return tryAddEventListener(this, eventType, listener, useCapture);
 #else
@@ -2451,6 +2464,18 @@ static inline bool tryRemoveEventListener(Node* targetNode, const AtomicString& 
 
 bool Node::removeEventListener(const AtomicString& eventType, EventListener* listener, bool useCapture)
 {
+	//If we want to propagate all the eventlistener modifications we just uncomment the following code.
+	/*
+	int worldID = 0;
+	V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
+	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
+	ExceptionCode ec;
+	if ((worldID == 0)&&(this->isHTMLElement())) 
+	{
+		((HTMLElement*)this)->removeAttribute("ACL", ec);
+		((HTMLElement*)this)->removeAttribute("ROACL", ec);
+	}
+	*/
 #if !ENABLE(SVG)
     return tryRemoveEventListener(this, eventType, listener, useCapture);
 #else
