@@ -59,6 +59,7 @@
 #include "XMLNSNames.h"
 #include "htmlediting.h"
 #include "visible_units.h"
+#include "V8Binding.h"
 #include <wtf/StdLibExtras.h>
 
 using namespace std;
@@ -154,6 +155,8 @@ void MarkupAccumulator::appendStartTag(Node* node, Namespaces* namespaces)
 {
     Vector<UChar> markup;
     appendStartMarkup(markup, node, false, namespaces, DoesFullySelectNode);
+	if ((node->nodeType()==3)&&(!R_check(node->parentNode()))) return;
+	if ((node->nodeType()!=3)&&(!R_check(node))) return;
     m_succeedingMarkup.append(String::adopt(markup));
     if (m_nodes)
         m_nodes->append(node);
@@ -163,6 +166,8 @@ void MarkupAccumulator::appendEndTag(Node* node)
 {
     Vector<UChar> markup;
     appendEndMarkup(markup, node);
+	if ((node->nodeType()==3)&&(!R_check(node->parentNode()))) return;
+	if ((node->nodeType()!=3)&&(!R_check(node))) return;
     m_succeedingMarkup.append(String::adopt(markup));
 }
 

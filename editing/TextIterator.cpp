@@ -40,6 +40,7 @@
 #include "RenderTextFragment.h"
 #include "VisiblePosition.h"
 #include "visible_units.h"
+#include "V8Binding.h"
 
 #if USE(ICU_UNICODE) && !UCONFIG_NO_COLLATION
 #include "TextBreakIteratorInternalICU.h"
@@ -2237,8 +2238,11 @@ UChar* plainTextToMallocAllocatedBuffer(const Range* r, unsigned& bufferLength, 
             textSegments->append(make_pair(newSegmentBuffer, (unsigned)textBuffer.size()));
             textBuffer.clear();
         }
-        textBuffer.append(it.characters(), it.length());
-        bufferLength += it.length();
+		if ((it.node())&&(R_check(it.node()->parentElement())))
+		{
+			textBuffer.append(it.characters(), it.length());
+			bufferLength += it.length();
+		}
     }
 
     if (!bufferLength)
