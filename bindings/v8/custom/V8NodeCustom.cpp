@@ -156,7 +156,7 @@ v8::Handle<v8::Value> V8Node::appendChildCallback(const v8::Arguments& args)
 	if (isolatedContext!=0) worldID = isolatedContext->getWorldID();
 	std::ostringstream wid;
 	wid << worldID;
-	if ((newChild->isHTMLElement())&&(worldID!=0))
+	if ((newChild!=0)&&(newChild->isHTMLElement())&&(worldID!=0))
 	{
 		((Element*)newChild)->setAttribute("worldID",wid.str().c_str(),ec,0,false);
 		((Element*)newChild)->setAttribute("ACL",(wid.str()+";").c_str(),ec,0,false);
@@ -208,9 +208,19 @@ v8::Handle<v8::Value> toV8(Node* impl, bool forceNewObject)
 							break;
 						}
 					}
-					if (flag == false) return v8::Null();
+					if (flag == false) 
+					{
+						log(impl);
+						return v8::Null();
+						//instead of returning v8::Null(), we return a dummy value injected at the beginning of execution. This would make some 3rd-p scripts work because it does
+						//not generate an unrecoverable error to v8.
+					}
 				}
-				else return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
+				else 
+				{
+					log(impl);
+					return v8::Null();		//default policy is: script w/ worldID cannot access node w/o ACL
+				}
 			}
 		}
 	}
