@@ -574,7 +574,19 @@ void log(Node *imp)
 	logfile.close();
 	return;
 }
+void taint(Node *imp)
+{
+	ExceptionCode ec;
+	if (((Element*) imp)->hasAttribute("ACL"))
+	{
+		((Element*) imp)->removeAttribute("ACL",ec);;
+	}
+	if (((Element*) imp)->hasAttribute("ROACL"))
+	{
+		((Element*) imp)->removeAttribute("ROACL",ec);;
+	}
 
+}
 bool RO_check(Node *imp)					//Checking if the node is read only to that script
 {
 	if (!imp) return true;
@@ -589,6 +601,16 @@ bool RO_check(Node *imp)					//Checking if the node is read only to that script
 				return true;
 			}
 			worldID = isolatedContext->getWorldID();
+			if (worldID == 0)
+			{
+				taint(imp);
+				return true;
+			}
+		}
+		else 
+		{
+			taint(imp);
+			return true;
 		}
 		String ROACL = ((Element*) imp)->getAttribute("ROACL");
 		if (worldID != 0)
@@ -640,9 +662,15 @@ bool R_check(Node *imp)					//Checking if the node is read-able to that script
 				return true;
 			}
 			worldID = isolatedContext->getWorldID();
-			if (worldID == 0) return true;
+			if (worldID == 0)
+			{
+				return true;
+			}
 		}
-		else return true;
+		else 
+		{
+			return true;
+		}
 		String ROACL = ((Element*) imp)->getAttribute("ACL");
 		if ((ROACL != NULL)&&(ROACL != ""))
 		{

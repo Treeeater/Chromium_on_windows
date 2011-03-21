@@ -565,12 +565,12 @@ void Element::setAttribute(const AtomicString& name, const AtomicString& value, 
 		if (worldID==0)
 		{
 			m_attributeMap->addAttribute(createAttribute(QualifiedName(nullAtom, localName, nullAtom), value));
-			if (name=="src")
-			{	
+			//if (name=="src")
+			//{	
 				//heuristic:only tainting nodes whose src is changed
-				this->removeAttribute("ACL", ec);
-				this->removeAttribute("ROACL", ec);
-			}
+			this->removeAttribute("ACL", ec);
+			this->removeAttribute("ROACL", ec);
+			//}
 		}
 		else
 		{
@@ -716,9 +716,9 @@ void Element::setAttributeMap(PassRefPtr<NamedNodeMap> list, FragmentScriptingPe
                 i++;
             }
         }
-        unsigned len = m_attributeMap->length();
+        //unsigned len = m_attributeMap->length();
 		V8IsolatedContext* isolatedContext = V8IsolatedContext::getEntered();
-        for (unsigned i = 0; i < len; i++)
+        for (unsigned i = 0; i < m_attributeMap->length(); i++)
 		{
 			Attribute* attr = m_attributeMap->m_attributes[i].get();
 			if (isolatedContext!=0)
